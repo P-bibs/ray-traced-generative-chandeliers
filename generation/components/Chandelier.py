@@ -1,10 +1,17 @@
 from common import SceneComponent
+from components.Layers import SquareLayer, OctagonLayer
 from shapes.primitives import Cube, Cone
 from shapes.transblock import TransBlock
+from shapes.tree import Tree
 
 class Chandelier(SceneComponent):
     def __init__(self):
-        self.body = TransBlock(Cone(diffuse=(1,1,1)), (0, 0, 0, 0), (-1.3, 1.2, 0), (1, 1, 1))
+        self.layers = [
+            SquareLayer((0, 4, 0), 1),
+            SquareLayer((0, 2, 0), 2),
+            OctagonLayer((0, 0, 0), 3),
+        ] 
 
     def scene_rep(self):
-        return self.body.scene_rep()
+        
+        return TransBlock(Tree(self.layers)).scene_rep()

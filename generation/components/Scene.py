@@ -1,5 +1,6 @@
 from common import SceneComponent
 from components.Chandelier import Chandelier
+from settings import settings
 
 class PointLight(SceneComponent):
     def __init__(self, id, color, position):
@@ -72,12 +73,18 @@ class Camera(SceneComponent):
                     self.height_angle)
 
 class Scene(SceneComponent):
-    def __init__(self, diffuse=None, specular=None, ambient=None, camera=None):
-        self.diffuse = diffuse or 0.5
-        self.specular = specular or 0.5
-        self.ambient = ambient or 0.5
-        self.camera = camera or Camera((0,0,3), (0,0,-1), (0,1,0), 45)
-        self.lights = [PointLight(1, (1, 1, 1), (0, 0, 1))]
+    def __init__(self):
+        self.diffuse = settings.diffuse 
+        self.specular = settings.specular 
+        self.ambient = settings.ambient 
+        self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
+        self.lights = [
+            PointLight(1, (1, 1, 1), (10, 0, 0)),
+            PointLight(2, (1, 1, 1), (0, 0, 10)),
+            PointLight(3, (1, 1, 1), (-10, 0, 0)),
+            PointLight(4, (1, 1, 1), (0, 0, -10)),
+            DirectionalLight(5, (1, 1, 1), (-1, -1, -1)),
+        ]
         self.chandelier = Chandelier()
 
     def scene_rep(self):
