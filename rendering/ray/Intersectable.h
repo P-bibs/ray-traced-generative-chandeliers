@@ -22,13 +22,13 @@ struct IntersectResult {
         // are left
         std::vector<IntersectResult> validIntersections;
         validIntersections.reserve(intersections.size());
-        std::copy_if(intersections.begin(),
-                     intersections.end(),
-                     std::back_inserter(validIntersections),
-                     [](const IntersectResult &intersection) {
-                         return intersection.tValue.has_value() &&
-                                intersection.tValue.value() >= 0 + EPSILON;
-                     });
+        for (int i = 0; i < intersections.size(); i++)
+        {
+            IntersectResult curr = intersections.at(i);
+            if (curr.tValue.has_value() && curr.tValue.value() >= 0 + EPSILON) {
+                validIntersections.push_back(curr);
+            }
+        }
         if (validIntersections.size() == 0) {
             return {std::nullopt, glm::vec3(0, 0, 0)};
         }

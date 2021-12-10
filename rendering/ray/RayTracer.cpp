@@ -113,7 +113,41 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
 
     // If there is no intersection, return black
     if (traceResult == std::nullopt) {
-        return RGBA(0, 0, 0, 1);
+        if(!scene->getEnvironmentMap().isUsed) {
+            return RGBA(0, 0, 0, 1);
+        } else {
+            IntersectResult interRes = ImplicitCube().intersectRay(glm::vec4(0),d);
+            QImage img;
+
+            //Implicit Assumption all sides are same dimensions
+            int s = texIndex(interRes.u,1,scene->getEnvironmentMap().pos_x.width());
+            int t = texIndex((1-interRes.v),1,scene->getEnvironmentMap().pos_x.height());
+
+            //Decide Which Image is intersected
+            glm::vec4 absD = glm::abs(d);
+            if (absD.x > absD.y && absD.x > absD.z) {
+                if (glm::sign(d.x) > 0) {
+                    img = scene->getEnvironmentMap().pos_x;
+                } else {
+                    img = scene->getEnvironmentMap().neg_x;
+                }
+            } else if (absD.y > absD.x && absD.y > absD.z) {
+                if (glm::sign(d.y) > 0) {
+                    img = scene->getEnvironmentMap().pos_y;
+                } else {
+                    img = scene->getEnvironmentMap().neg_y;
+                }
+            } else {
+                if (glm::sign(d.z) > 0) {
+                    img = scene->getEnvironmentMap().pos_z;
+                } else {
+                    img = scene->getEnvironmentMap().neg_z;
+                }
+            }
+
+            QColor pixel = img.pixel(s, t);
+            return RGBA(pixel.red(),pixel.green(),pixel.blue(),255);
+        }
     }
     TraceResult intersection = traceResult.value();
 
@@ -132,6 +166,7 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
     float ka = scene->getGlobalData().ka;
     float kd = scene->getGlobalData().kd;
     float ks = scene->getGlobalData().ks;
+    float kt = scene->getGlobalData().kt;
     auto mat = intersection.primitive.material;
 
     // Initialize vector where we'll accumulate the lighting equation. Each color starts with the
@@ -171,7 +206,7 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
                 continue;
             }
 
-            // Ignore this light if it's occluded
+            // Ignore this light if it's occluded TODO add transparency information into this
             if (settings.useShadows && RayTracer::checkOcclusionForRay(glm::vec3(intersectionPoint),
                                                                        glm::vec3(-light.dir),
                                                                        scene)) {
@@ -203,8 +238,9 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
                 int h = texture->height();
 
                 // perform actual calculation
-                int s = static_cast<int>(u * j * w) % w;
-                int t = static_cast<int>((1 - v) * k * h) % h;
+                int s = texIndex(u,j,w);
+                int t = texIndex((1-v),k,h);
+
                 QColor pixel = texture->pixel(s, t);
 
                 // convert from [0,255] to [0,1]
@@ -237,7 +273,8 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
     }
 
     // Recursively trace ray to calculate reflection
-    if (settings.useReflection && depth >= 1) {
+    if (settings.useReflection && depth >= 1 &&
+            glm::length(mat.cReflective) > 0.01) {
         // calculate reflected ray by reflecting around the normal
         glm::vec3 reflectedRay = glm::normalize(glm::reflect(glm::vec3(d), normalInWorldCoords));
 
@@ -255,6 +292,45 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
 
         // add reflection to final color
         color += ks * glm::vec3(mat.cReflective) * (RGBA::toVec(reflectedColor) / 255.0f);
+    }
+
+    if (settings.useRefraction &&
+            depth >= 1 &&
+            glm::length(mat.cTransparent) > 0.01) {
+        // test if we are on the inside or outside of the shape
+        float ior = mat.ior;
+        if ( glm::sign(glm::dot(normalInWorldCoords,toEye)) > 0) {
+            normalInWorldCoords = normalInWorldCoords;
+            ior = 1/ior;
+        } else {
+            normalInWorldCoords = -1.0f * normalInWorldCoords;
+        }
+        // calculate perpendicular component to normal vector along toEye
+
+        glm::vec3 toEyePerpendicularToNormal = glm::normalize(toEye - normalInWorldCoords *
+                                                                      glm::dot(normalInWorldCoords,toEye));
+
+        // compute refracted angle inside material
+        float reflectedAngle = glm::asin(ior * glm::abs(glm::length(glm::cross(glm::normalize(toEye),normalInWorldCoords))));
+
+        // compute refreacted ray
+        glm::vec3 refractedRay = glm::cos(reflectedAngle) * -normalInWorldCoords +
+                                 glm::sin(reflectedAngle)* -toEyePerpendicularToNormal;
+
+        // compute new origin point
+        glm::vec4 newRayOriginPoint =
+                intersectionPoint + (glm::vec4(refractedRay, 0) * EPSILON * 10.0f);
+
+        // trace the refracted ray
+        auto result = RayTracer::traceRayFromPoint(
+            newRayOriginPoint, glm::vec4(refractedRay, 0), depth - 1, scene);
+
+        // compute lighting equation for refraction
+        RGBA refractedColor = RayTracer::calculateLightingEquation(
+            result, scene, newRayOriginPoint, glm::vec4(refractedRay, 0), depth - 1);
+
+        // add refraction to final color
+        color += kt * glm::vec3(mat.cTransparent) * (RGBA::toVec(refractedColor) / 255.0f);
     }
 
     // Scale and clamp values to the range [0,255]

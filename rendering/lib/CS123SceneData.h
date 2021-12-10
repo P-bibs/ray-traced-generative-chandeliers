@@ -80,6 +80,29 @@ struct CS123SceneCameraData {
    float focalLength;   // Only applicable for depth of field
 };
 
+// Data for Environment maps
+struct CS123SceneEnvironmentMap {
+   bool isUsed;
+   std::string filePath;
+   QImage pos_x;
+   QImage pos_y;
+   QImage pos_z;
+   QImage neg_x;
+   QImage neg_y;
+   QImage neg_z;
+
+   void clear() {
+       isUsed = false;
+       filePath = std::string();
+       pos_x = QImage();
+       pos_y = QImage();
+       pos_z = QImage();
+       neg_x = QImage();
+       neg_y = QImage();
+       neg_z = QImage();
+   }
+};
+
 // Data for file maps (ie: texture maps)
 struct CS123SceneFileMap {
 //    CS123SceneFileMap() : texid(0) {}

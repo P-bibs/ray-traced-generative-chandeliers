@@ -56,6 +56,11 @@ CS123XmlSceneParser::~CS123XmlSceneParser()
     m_objects.clear();
 }
 
+bool CS123XmlSceneParser::getEnvironmentMapData(CS123SceneEnvironmentMap& data) const {
+    data = m_environmentMap;
+    return true;
+}
+
 bool CS123XmlSceneParser::getGlobalData(CS123SceneGlobalData& data) const {
     data = m_globalData;
     return true;
@@ -125,6 +130,9 @@ bool CS123XmlSceneParser::parse() {
     m_globalData.kd = 0.5f;
     m_globalData.ks = 0.5f;
 
+    // Default environment Data
+    m_environmentMap.isUsed = false;
+
     // Iterate over child elements
     QDomNode childNode = scenefile.firstChild();
     while (!childNode.isNull()) {
@@ -134,6 +142,9 @@ bool CS123XmlSceneParser::parse() {
                 return false;
         } else if (e.tagName() == "lightdata") {
             if (!parseLightData(e))
+                return false;
+        } else if (e.tagName() == "environmentdata") {
+            if (!parseEnvironmentData(e))
                 return false;
         } else if (e.tagName() == "cameradata") {
             if (!parseCameraData(e))
@@ -286,6 +297,22 @@ bool parseMap(const QDomElement &e, CS123SceneFileMap &map) {
     map.repeatU = e.hasAttribute("u") ? e.attribute("u").toFloat() : 1;
     map.repeatV = e.hasAttribute("v") ? e.attribute("v").toFloat() : 1;
     map.isUsed = true;
+    return true;
+}
+
+/**
+ * Parse a <environmentData> tag and fill in m_environmentMap.
+ */
+bool CS123XmlSceneParser::parseEnvironmentData(const QDomElement &environmentdata) {
+    QDomNode childNode = environmentdata.firstChild();
+    while (!childNode.isNull()) {
+        QDomElement e = childNode.toElement();
+        if (e.tagName() == "folderpath") {
+            m_environmentMap.filePath = e.attribute("folderpath").toStdString();
+            m_environmentMap.isUsed = true;
+        }
+        childNode = childNode.nextSibling();
+    }
     return true;
 }
 

@@ -17,6 +17,7 @@ struct CS123SceneCameraData;
 struct CS123SceneNode;
 struct CS123SceneGlobalData;
 struct CS123SceneLightData;
+struct CS123SceneEnvironmentMap;
 
 // Interface for accessing parsed scenegraph data.
 // Subclasses will have file format specific implementations.
@@ -34,6 +35,8 @@ public:
 
     // On return data will contain the global scene data
     virtual bool getGlobalData(CS123SceneGlobalData& data) const = 0;
+
+    virtual bool getEnvironmentMapData(CS123SceneEnvironmentMap& data) const = 0;
 
     // Returns the root node of the scene graph
     virtual CS123SceneNode* getRootNode() const = 0;

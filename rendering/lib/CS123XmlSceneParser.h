@@ -33,6 +33,8 @@ public:
 
     virtual bool getCameraData(CS123SceneCameraData& data) const;
 
+    virtual bool getEnvironmentMapData(CS123SceneEnvironmentMap& data) const;
+
     virtual CS123SceneNode* getRootNode() const;
 
     virtual int getNumLights() const;
@@ -45,6 +47,7 @@ private:
     // The filename should be contained within this parser implementation.
     // If you want to parse a new file, instantiate a different parser.
     bool parseGlobalData(const QDomElement &globaldata);
+    bool parseEnvironmentData(const QDomElement &environmentdata);
     bool parseCameraData(const QDomElement &cameradata);
     bool parseLightData(const QDomElement &lightdata);
     bool parseObjectData(const QDomElement &object);
@@ -57,6 +60,7 @@ private:
     std::vector<CS123SceneLightData*> m_lights;
     CS123SceneGlobalData m_globalData;
     std::vector<CS123SceneNode*> m_nodes;
+    CS123SceneEnvironmentMap m_environmentMap;
 };
 
 #endif

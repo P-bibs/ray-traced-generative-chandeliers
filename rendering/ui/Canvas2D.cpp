@@ -220,6 +220,7 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
                 primitive->material.textureMap.handle = m_textures[m_textures.size() - 1].get();
             }
         }
+        this->m_rayScene->loadEvironmentMap();
 
         // Resize the canvas
         resize(width, height);

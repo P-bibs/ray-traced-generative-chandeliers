@@ -23,6 +23,7 @@ Scene::Scene(Scene &scene) {
     m_lightData = std::vector<CS123SceneLightData>(scene.m_lightData);
     m_globalData = scene.m_globalData;
     m_primitives = std::vector<std::tuple<CS123ScenePrimitive, glm::mat4x4>>(scene.m_primitives);
+    m_environmentMap = scene.m_environmentMap;
 
     // Clone existing textures to new scene
     //    auto new_textures = std::vector<std::shared_ptr<QImage>>();
@@ -45,6 +46,12 @@ void Scene::parse(Scene *sceneToFill, CS123ISceneParser *parser) {
     CS123SceneGlobalData globalData;
     parser->getGlobalData(globalData);
     sceneToFill->setGlobal(globalData);
+
+    // save Environment Map Data
+
+    CS123SceneEnvironmentMap envMapData;
+    parser->getEnvironmentMapData(envMapData);
+    sceneToFill->setEnvironmentMap(envMapData);
 
     // save light data
     auto numLights = parser->getNumLights();
@@ -110,4 +117,21 @@ void Scene::addLight(const CS123SceneLightData &sceneLight) {
 
 void Scene::setGlobal(const CS123SceneGlobalData &global) {
     m_globalData = CS123SceneGlobalData(global);
+}
+
+void Scene::setEnvironmentMap(const CS123SceneEnvironmentMap &envMap) {
+    m_environmentMap = envMap;
+}
+
+void Scene::loadEvironmentMap() {
+    CS123SceneEnvironmentMap envMap = this->m_environmentMap;
+    if (envMap.isUsed) {
+        this->m_environmentMap.pos_x = QImage(QString::fromStdString(envMap.filePath + "/posx.jpg"));
+        this->m_environmentMap.pos_y = QImage(QString::fromStdString(envMap.filePath + "/posy.jpg"));
+        this->m_environmentMap.pos_z = QImage(QString::fromStdString(envMap.filePath + "/posz.jpg"));
+
+        this->m_environmentMap.neg_x = QImage(QString::fromStdString(envMap.filePath + "/negx.jpg"));
+        this->m_environmentMap.neg_y = QImage(QString::fromStdString(envMap.filePath + "/negy.jpg"));
+        this->m_environmentMap.neg_z = QImage(QString::fromStdString(envMap.filePath + "/negz.jpg"));
+    }
 }

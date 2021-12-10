@@ -23,7 +23,11 @@
 #define EPSILON 0.00001f
 // Near plane distance
 #define K 0.1f
-#define REFLECTION_DEPTH 3
+#define REFLECTION_DEPTH 5
+
+
+// Helper function to calculate the texture coordinate from U/V coordinate
+inline int texIndex(float coord, int repeat, int size) { return static_cast<int>(coord * repeat * size) % size; };
 
 // A struct to store the result of a ray tracing collision
 struct TraceResult {

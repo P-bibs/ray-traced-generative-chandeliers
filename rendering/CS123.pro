@@ -6,7 +6,7 @@ TARGET = CS123
 TEMPLATE = app
 
 QMAKE_LFLAGS += -no-pie
-QMAKE_CXXFLAGS += -std=c++20
+QMAKE_CXXFLAGS += -std=c++17
 CONFIG += c++20
 
 unix:!macx {
