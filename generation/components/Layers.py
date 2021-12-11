@@ -28,12 +28,13 @@ class SquareLayer(SceneComponent):
 
         return full_layer.scene_rep()
 
-class OctagonLayer(SceneComponent):
-    def __init__(self, center, radius, girth):
+class PolygonLayer(SceneComponent):
+    def __init__(self, center, radius, sides, girth):
         self.center = center
         self.radius = radius
+        self.sides = sides
         self.girth = girth
-        r = 0.2
+        r = self.girth
         self.chain_types = [
             lambda top: TaperedSphereChain((top[0], top[1] - r / 2, top[2]), 8, r / 2, r / 8),
             lambda top: TaperedSphereChain((top[0], top[1] - r / 2, top[2]), 4, r / 2, r / 4),
@@ -43,65 +44,29 @@ class OctagonLayer(SceneComponent):
         cylinder = Cylinder(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
         sphere= Sphere(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
 
-        g = self.girth
-        r = self.radius
 
-        side_length = self.radius / (1/2 + 1/math.sqrt(2))
-        triangle_foot = math.sqrt(side_length ** 2 / 2)
-        diagonal_offset = side_length / 2 + triangle_foot / 2
+        theta = math.pi * 2 / self.sides
+        edge_offset = self.radius * math.cos(theta / 2) 
+        side_length = 2 * self.radius * math.sin(theta / 2)
+
+        side_no_joints =  Tree([TransBlock(cylinder, rotate=(0,0,-1,90), scale=(self.girth, side_length, self.girth))])
 
 
-        # One octagon side, of proper length and with joints, collinear with x axis, centered at 0
-        octagon_side = Tree([TransBlock(Tree([
-                TransBlock(cylinder, scale=(g, side_length, g)),
-                TransBlock(sphere, translate=(0, side_length / 2, 0), scale=(g, g, g)),
-                TransBlock(sphere, translate=(0, -side_length / 2, 0), scale=(g, g, g)),
-        ]), rotate=(0,0,-1,90))])
-        # One octagon side, of proper length and without joints, collinear with x axis, centered at 0
-        octagon_side_no_joints = Tree([
-                TransBlock(cylinder, rotate=(0,0,-1,90), scale=(g, side_length, g))
-        ])
+        sides = []
+        for i in range(self.sides):
+            angle = 2 * math.pi * i / self.sides
+            x = math.cos(angle) * edge_offset
+            y = 0
+            z = math.sin(angle) * edge_offset
+            sides.append(TransBlock(side_no_joints, translate=(x,y,z), rotate=(0,-1,0, math.degrees(angle) + 90)))
 
-        parts = [
-            # top_side
-            TransBlock(octagon_side, translate=(0,0,-r)),
-            # bottom_side
-            TransBlock(octagon_side, translate=(0,0,r)),
-            # left_side
-            TransBlock(octagon_side, translate=(r,0,0), rotate=(0,1,0,90)),
-            # right_side
-            TransBlock(octagon_side, translate=(-r,0,0), rotate=(0,1,0,90)),
-            # top_left_corner
-            TransBlock(octagon_side_no_joints, translate=(-diagonal_offset,0,-diagonal_offset), rotate=(0,1,0,45)),
-            # top_right_corner
-            TransBlock(octagon_side_no_joints, translate=(diagonal_offset,0,-diagonal_offset), rotate=(0,1,0,-45)),
-            # bottom_left_corner
-            TransBlock(octagon_side_no_joints, translate=(-diagonal_offset,0,diagonal_offset), rotate=(0,1,0,-45)),
-            # bottom_right_corner
-            TransBlock(octagon_side_no_joints, translate=(diagonal_offset,0,diagonal_offset), rotate=(0,1,0,45)),
-        ]
-
-        r = self.girth / 1.5
-        short_off = side_length / 2
-        long_off = side_length / 2 + triangle_foot
-        joints = [
-            # top left
-            TransBlock(sphere, (0,0,0,0), (-short_off,-g,-long_off), (r, r, r)),
-            # top right
-            TransBlock(sphere, (0,0,0,0), (short_off,-g,-long_off), (r, r, r)),
-            # bottom left
-            TransBlock(sphere, (0,0,0,0), (-short_off,-g,long_off), (r, r, r)),
-            # bottom right
-            TransBlock(sphere, (0,0,0,0), (short_off,-g,long_off), (r, r, r)),
-            # left top
-            TransBlock(sphere, (0,0,0,0), (-long_off,-g,-short_off), (r, r, r)),
-            # left bottom
-            TransBlock(sphere, (0,0,0,0), (-long_off,-g,short_off), (r, r, r)),
-            # right top
-            TransBlock(sphere, (0,0,0,0), (long_off,-g,-short_off), (r, r, r)),
-            # right bottom
-            TransBlock(sphere, (0,0,0,0), (long_off,-g,short_off), (r, r, r))
-        ]
+        joints = []
+        for i in range(self.sides):
+            angle = 2 * math.pi * i / self.sides + theta / 2
+            x = math.cos(angle) * self.radius
+            y = 0
+            z = math.sin(angle) * self.radius
+            joints.append(TransBlock(sphere, translate=(x,y,z), scale=(self.girth, self.girth, self.girth)))
 
         chains = []
         for i, joint in enumerate(joints):
@@ -111,7 +76,7 @@ class OctagonLayer(SceneComponent):
             chains.append(chain_type(top))
 
         full_layer = TransBlock(
-            Tree(parts + joints + chains),
+            Tree(sides + joints + chains),
             (0,0,0,0),
             self.center,
             (self.radius, self.radius, self.radius)
