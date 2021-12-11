@@ -44,4 +44,4 @@ class TransBlock(SceneComponent):
             "    {}\n"
             "    {}\n"
             "</transblock>\n"
-        ).format(rotate_string, translate_string, scale_string, inner_string)
+        ).format(translate_string, rotate_string, scale_string, inner_string)

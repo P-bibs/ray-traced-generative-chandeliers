@@ -1,7 +1,7 @@
 import sys
 from components.Scene import Scene
 
-
+# sys.argv = ["python", "scenes/chand.xml"]
 # Get the output file from command line argument
 if len(sys.argv) < 2:
     print("Usage: python main.py <output file>")

@@ -79,11 +79,11 @@ class Scene(SceneComponent):
         self.ambient = settings.ambient 
         self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
         self.lights = [
-            PointLight(1, (1, 1, 1), (10, 0, 0)),
-            PointLight(2, (1, 1, 1), (0, 0, 10)),
-            PointLight(3, (1, 1, 1), (-10, 0, 0)),
-            PointLight(4, (1, 1, 1), (0, 0, -10)),
-            DirectionalLight(5, (1, 1, 1), (-1, -1, -1)),
+            PointLight(1, (0.5, 0.5, 0.5), (10, 0, 0)),
+            PointLight(2, (0.5, 0.5, 0.5), (0, 0, 10)),
+            PointLight(3, (0.5, 0.5, 0.5), (-10, 0, 0)),
+            PointLight(4, (0.5, 0.5, 0.5), (0, 0, -10)),
+            DirectionalLight(5, (0.5, 0.5, 0.5), (-1, -1, -1)),
         ]
         self.chandelier = Chandelier()
 
