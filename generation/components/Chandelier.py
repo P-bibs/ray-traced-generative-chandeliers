@@ -9,7 +9,8 @@ class Chandelier(SceneComponent):
         self.layers = [
             # SquareLayer((0, 4, 0), 1),
             # SquareLayer((0, 2, 0), 2),
-            OctagonLayer((0, 0, 0), 3),
+            OctagonLayer((0, 0, 0), 3, 0.3),
+            # OctagonLayer((0, -3, 0), 6, 0.1),
         ] 
 
     def scene_rep(self):
