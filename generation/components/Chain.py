@@ -13,15 +13,21 @@ class TiltedSphereChain(SceneComponent):
 
     def scene_rep(self):
         sphere = Sphere(
-        diffuse=settings.default_diffuse,
-        ambient=settings.default_ambient,
-        specular=settings.default_specular,
-        shininess=settings.default_shininess,
-        refraction=settings.default_refraction,
-    )
-        start_to_end = (self.end[0] - self.start[0], self.end[1] - self.start[1], self.end[2] - self.start[2])
+            diffuse=settings.default_diffuse,
+            ambient=settings.default_ambient,
+            specular=settings.default_specular,
+            shininess=settings.default_shininess,
+            refraction=settings.default_refraction,
+        )
+        start_to_end = (
+            self.end[0] - self.start[0],
+            self.end[1] - self.start[1],
+            self.end[2] - self.start[2],
+        )
 
-        distance = (start_to_end[0] ** 2 + start_to_end[1] ** 2 + start_to_end[2] ** 2) ** 0.5
+        distance = (
+            start_to_end[0] ** 2 + start_to_end[1] ** 2 + start_to_end[2] ** 2
+        ) ** 0.5
         radius = distance / (2 * self.count)
 
         spheres = []
@@ -30,26 +36,48 @@ class TiltedSphereChain(SceneComponent):
             interped = (
                 self.start[0] + start_to_end[0] * progress,
                 self.start[1] + start_to_end[1] * progress,
-                self.start[2] + start_to_end[2] * progress
+                self.start[2] + start_to_end[2] * progress,
             )
-            spheres.append(TransBlock(
-                sphere, translate=(interped), scale=(radius, radius, radius)
-            ))
+            spheres.append(
+                TransBlock(sphere, translate=(interped), scale=(radius, radius, radius))
+            )
 
         return TransBlock(Tree(spheres)).scene_rep()
 
 
+class CylinderChain(SceneComponent):
+    def __init__(self, top, length, radius):
+        self.top = top
+        self.length = length
+        self.radius = radius
+
+    def scene_rep(self):
+        return TransBlock(
+            Cube(
+                diffuse=settings.default_diffuse,
+                ambient=settings.default_ambient,
+                specular=settings.default_specular,
+                shininess=settings.default_shininess,
+                refraction=settings.default_refraction,
+                reflective=settings.default_reflective,
+                transparent=(0.9, 0.9, 0.9),
+            ),
+            translate=(self.top[0], self.top[1] - self.length / 2, self.top[2]),
+            rotate=(1, 0, 0, 00),
+            scale=(self.radius, self.length, self.radius),
+        ).scene_rep()
 
 
 def SphereChain(top, count, radius):
     sphere = Sphere(
-            diffuse=settings.default_diffuse,
-            ambient=settings.default_ambient,
-            specular=settings.default_specular,
-            shininess=settings.default_shininess,
-            refraction=settings.default_refraction,
-        )
+        diffuse=settings.default_diffuse,
+        ambient=settings.default_ambient,
+        specular=settings.default_specular,
+        shininess=settings.default_shininess,
+        refraction=settings.default_refraction,
+    )
     return TaperedChain(sphere, top, count, radius, radius)
+
 
 def TaperedSphereChain(top, count, start_radius, end_radius):
     sphere = Sphere(
@@ -61,15 +89,24 @@ def TaperedSphereChain(top, count, start_radius, end_radius):
     )
     return TaperedChain(sphere, top, count, start_radius, end_radius)
 
+
 def DiamondChain(top, count, radius):
-    diamond = Tree([TransBlock(Cube(
-        diffuse=settings.default_diffuse,
-        ambient=settings.default_ambient,
-        specular=settings.default_specular,
-        shininess=settings.default_shininess,
-        refraction=settings.default_refraction,
-    ), rotate=(-1,-1,0,45))])
+    diamond = Tree(
+        [
+            TransBlock(
+                Cube(
+                    diffuse=settings.default_diffuse,
+                    ambient=settings.default_ambient,
+                    specular=settings.default_specular,
+                    shininess=settings.default_shininess,
+                    refraction=settings.default_refraction,
+                ),
+                rotate=(-1, -1, 0, 45),
+            )
+        ]
+    )
     return TaperedChain(diamond, top, count, radius / 2, radius / 2)
+
 
 class TaperedChain(SceneComponent):
     def __init__(self, shape, top, count, start_radius, end_radius):
@@ -98,5 +135,6 @@ class TaperedChain(SceneComponent):
             current_y_location -= interped_radius
 
         return TransBlock(
-            Tree(links), translate=(self.top[0], self.top[1] - self.start_radius, self.top[2])
+            Tree(links),
+            translate=(self.top[0], self.top[1] - self.start_radius, self.top[2]),
         ).scene_rep()

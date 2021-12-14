@@ -1,6 +1,7 @@
 from common import SceneComponent
 from components.Chandelier import Chandelier
 from settings import settings
+import context
 
 class PointLight(SceneComponent):
     def __init__(self, id, color, position):
@@ -78,17 +79,28 @@ class Scene(SceneComponent):
         self.specular = settings.specular 
         self.ambient = settings.ambient 
         self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
-        self.lights = [
-            PointLight(1, (0.5, 0.5, 0.5), (10, 0, 0)),
-            PointLight(2, (0.5, 0.5, 0.5), (0, 0, 10)),
-            PointLight(3, (0.5, 0.5, 0.5), (-10, 0, 0)),
-            PointLight(4, (0.5, 0.5, 0.5), (0, 0, -10)),
-            DirectionalLight(5, (0.5, 0.5, 0.5), (-1, -1, -1)),
-        ]
+
+        self.env_map = settings.environment_map
+
+        context.append_light(
+            PointLight(context.get_id(), (0.5, 0.5, 0.5), (10, 0, 0))
+        )
+        context.append_light(
+            PointLight(context.get_id(), (0.5, 0.5, 0.5), (0, 0, 10))
+        )
+        context.append_light(
+            PointLight(context.get_id(), (0.5, 0.5, 0.5), (-10, 0, 0))
+        )
+        context.append_light(
+            PointLight(context.get_id(), (0.5, 0.5, 0.5), (0, 0, -10))
+        )
+        context.append_light(
+            DirectionalLight(context.get_id(), (0.5, 0.5, 0.5), (-1, -1, -1))
+        )
         self.chandelier = Chandelier()
 
     def scene_rep(self):
-        light_data = [light.scene_rep() for light in self.lights]
+        light_data = [light.scene_rep() for light in context.get_lights()]
         light_data = '\n'.join(light_data)
         return ('<scenefile>\n'
                 '<globaldata>\n'
@@ -96,6 +108,9 @@ class Scene(SceneComponent):
                 '<specularcoeff v="{}"/>\n'
                 '<ambientcoeff v="{}"/>\n'
                 '</globaldata>\n'
+                '<environmentdata>\n'
+                '<folderpath folderpath="{}"/>\n'
+                '</environmentdata>\n'
                 '{}\n'
                 '{}\n'
                 '<object type="tree" name="root">\n'
@@ -106,6 +121,7 @@ class Scene(SceneComponent):
                     self.diffuse,
                     self.specular,
                     self.ambient,
+                    self.env_map,
                     self.camera.scene_rep(),
                     light_data,
                     self.chandelier.scene_rep())

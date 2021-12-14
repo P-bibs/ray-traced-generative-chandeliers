@@ -40,6 +40,18 @@ class PolygonLayer(SceneComponent):
             lambda top: TaperedSphereChain((top[0], top[1] - r / 2, top[2]), 4, r / 2, r / 4),
         ]
 
+    def get_attachment_points_world_space(self):
+        points = []
+        theta = math.pi * 2 / self.sides
+        for i in range(self.sides):
+            angle = 2 * math.pi * i / self.sides + theta / 2
+            x = math.cos(angle) * self.radius
+            y = 0
+            z = math.sin(angle) * self.radius
+            points.append((x + self.center[0], y + self.center[1], z + self.center[2]))
+
+        return points
+
     def scene_rep(self):
         cylinder = Cylinder(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
         sphere= Sphere(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
@@ -69,17 +81,17 @@ class PolygonLayer(SceneComponent):
             joints.append(TransBlock(sphere, translate=(x,y,z), scale=(self.girth, self.girth, self.girth)))
 
         chains = []
-        for i, joint in enumerate(joints):
-            chain_type = self.chain_types[i % len(self.chain_types)]
-            top = joint.translate
+        # for i, joint in enumerate(joints):
+        #     chain_type = self.chain_types[i % len(self.chain_types)]
+        #     top = joint.translate
             
-            chains.append(chain_type(top))
+        #     chains.append(chain_type(top))
 
         full_layer = TransBlock(
             Tree(sides + joints + chains),
             (0,0,0,0),
             self.center,
-            (self.radius, self.radius, self.radius)
+            (1,1,1) # (self.radius, self.radius, self.radius)
         )
 
         return full_layer.scene_rep()
