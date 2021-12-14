@@ -78,22 +78,23 @@ class Scene(SceneComponent):
         self.diffuse = settings.diffuse 
         self.specular = settings.specular 
         self.ambient = settings.ambient 
+        self.transparent = settings.transparent
         self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
 
         self.env_map = settings.environment_map
 
-        context.append_light(
-            PointLight(context.get_id(), (0.5, 0.5, 0.5), (10, 0, 0))
-        )
-        context.append_light(
-            PointLight(context.get_id(), (0.5, 0.5, 0.5), (0, 0, 10))
-        )
-        context.append_light(
-            PointLight(context.get_id(), (0.5, 0.5, 0.5), (-10, 0, 0))
-        )
-        context.append_light(
-            PointLight(context.get_id(), (0.5, 0.5, 0.5), (0, 0, -10))
-        )
+        # context.append_light(
+        #     PointLight(context.get_id(), (0.5, 0.5, 0.5), (10, 0, 0))
+        # )
+        # context.append_light(
+        #     PointLight(context.get_id(), (0.5, 0.5, 0.5), (0, 0, 10))
+        # )
+        # context.append_light(
+        #     PointLight(context.get_id(), (0.5, 0.5, 0.5), (-10, 0, 0))
+        # )
+        # context.append_light(
+        #     PointLight(context.get_id(), (0.5, 0.5, 0.5), (0, 0, -10))
+        # )
         context.append_light(
             DirectionalLight(context.get_id(), (0.5, 0.5, 0.5), (-1, -1, -1))
         )
@@ -107,6 +108,7 @@ class Scene(SceneComponent):
                 '<diffusecoeff v="{}"/>\n'
                 '<specularcoeff v="{}"/>\n'
                 '<ambientcoeff v="{}"/>\n'
+                '<transparentcoeff v="{}"/>\n'
                 '</globaldata>\n'
                 '<environmentdata>\n'
                 '<folderpath folderpath="{}"/>\n'
@@ -121,6 +123,7 @@ class Scene(SceneComponent):
                     self.diffuse,
                     self.specular,
                     self.ambient,
+                    self.transparent,
                     self.env_map,
                     self.camera.scene_rep(),
                     light_data,

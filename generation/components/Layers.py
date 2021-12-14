@@ -1,4 +1,5 @@
 import math
+import materials
 from common import SceneComponent
 from shapes.transblock import TransBlock
 from shapes.primitives import Cube, Cylinder, Sphere
@@ -13,7 +14,7 @@ class SquareLayer(SceneComponent):
 
 
     def scene_rep(self):
-        cube = Cube(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
+        cube = Cube(materials.gold)
         top_side = TransBlock(cube, (0,0,0,0), (0,0,-1), (2.5, 0.5, 0.5))
         bottom_side = TransBlock(cube, (0,0,0,0), (0,0,1), (2.5, 0.5, 0.5))
         left_side = TransBlock(cube, (0,0,0,0), (-1,0,0), (0.5, 0.5, 2.5))
@@ -53,8 +54,8 @@ class PolygonLayer(SceneComponent):
         return points
 
     def scene_rep(self):
-        cylinder = Cylinder(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
-        sphere= Sphere(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess, reflective=(0.7,0.7,0.7))
+        cylinder = Cylinder(materials.silver)
+        sphere= Sphere(materials.silver)
 
 
         theta = math.pi * 2 / self.sides
