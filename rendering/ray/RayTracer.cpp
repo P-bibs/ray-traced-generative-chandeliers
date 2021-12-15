@@ -339,7 +339,7 @@ RGBAfloat RayTracer::calculateLightingEquation(std::optional<TraceResult> traceR
         color += kt * glm::vec3(mat.cTransparent) * (RGBAfloat::toVec(refractedColor));
     }
 
-    // Scale and clamp values to the range [0,1]
+    // clamp values to the range [0,inf]
     return RGBAfloat(std::max(0.0f, color.r),
                      std::max(0.0f, color.g),
                      std::max(0.0f, color.b),
