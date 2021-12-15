@@ -18,6 +18,7 @@
 #include <memory>
 #include <unistd.h>
 
+#include "filter/FilterUtils.h"
 #include "Camera.h"
 #include "brush/Brush.h"
 #include "brush/ConstantBrush.h"
@@ -227,6 +228,7 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
 
         // Get the canvas data
         RGBA *pix = data();
+        RGBAfloat* post_proc_pix = new RGBAfloat[height * width];
 
         // Regardless of which ray tracing function we call below, we'll need some common pieces
         // of data that let us convert from camera space to world space. Calculate them now
@@ -257,6 +259,7 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
                                                int,
                                                int,
                                                RGBA *,
+                                               RGBAfloat *,
                                                RayScene *,
                                                Canvas2D *,
                                                float,
@@ -264,12 +267,13 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
                                                glm::mat4>>();
             args.reserve(height);
             // We want one thread to process each scan line, so we wrap up arguments and make a
-            // vector that has one element for each line of hte image
+            // vector that has one element for each line of the image
             for (int row = 0; row < height; row++) {
                 args.push_back(std::make_tuple(row,
                                                width,
                                                height,
                                                pix,
+                                               post_proc_pix,
                                                m_rayScene.get(),
                                                this,
                                                viewAngleHeight,
@@ -290,13 +294,16 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
             for (int row = 0; row < height; row++) {
                 for (int col = 0; col < width; col++) {
                     // Calculate the screen space coordinate in the middle of the pixel
-                    pix[row * width + col] = RayTracer::traceScreenSpacePoint(
-                        2 * K * tan(glm::radians(viewAngleWidth) / 2.0) *
-                            ((col + 0.5) / width - 0.5),
-                        2 * K * tan(glm::radians(viewAngleHeight) / 2.0) *
-                            (0.5 - ((row + 0.5) / height)),
-                        cameraViewMatrix,
-                        m_rayScene.get());
+
+                    RGBAfloat result =    RayTracer::traceScreenSpacePoint(
+                                2 * K * tan(glm::radians(viewAngleWidth) / 2.0) *
+                                    ((col + 0.5) / width - 0.5),
+                                2 * K * tan(glm::radians(viewAngleHeight) / 2.0) *
+                                    (0.5 - ((row + 0.5) / height)),
+                                cameraViewMatrix,
+                                m_rayScene.get());
+                    pix[row * width + col] = result;
+                    post_proc_pix[row * width + col] = result;
                 }
 
                 // Update the canvas after each scan line
@@ -304,6 +311,45 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
                 QCoreApplication::processEvents();
             }
         }
+
+        //Compute Glint post processing effect.
+        //Step 1: Threshold post_proc_pix based on luminosity
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                int centerIndex = getIndex(row,col,height,width);
+                RGBAfloat color = post_proc_pix[centerIndex];
+                float luminosity = (0.299f * color.r) +
+                                   (0.587f * color.g) +
+                                   (0.114f * color.b);
+                if (luminosity < 0.9) {
+                   post_proc_pix[centerIndex] = RGBAfloat(0,0,0,1.0);
+                } else {
+                   float scaleFactor = 0.3;
+                   RGBAfloat res = post_proc_pix[centerIndex].operator*(RGBAfloat(glm::vec3(scaleFactor)));
+                   post_proc_pix[centerIndex] = res;
+                }
+            }
+        }
+        //Step 2: Apply bloom filter to post_proc_pix
+        FilterUtils::blur(post_proc_pix,width,height,100);
+
+        //Step 3: Add bloom result back into pix
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                RGBAfloat color = post_proc_pix[row * width + col];
+                color = color.operator+(RGBAfloat(pix[row * width + col]));
+                color.a = 1.0;
+                pix[row * width + col] = RGBA(color);
+            }
+        }
+
+        //Step 4: Profit
+
+        update();
+        QCoreApplication::processEvents();
+
+        //delete post_proc_pix to prevent memory leak
+        delete[] post_proc_pix;
     }
 }
 

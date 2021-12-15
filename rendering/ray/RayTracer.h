@@ -57,16 +57,15 @@ class RayTracer {
     static bool checkOcclusionForRay(glm::vec3 point, glm::vec3 ray, RayScene *scene);
     // Ray trace a full scan line
     static bool traceScanLine(
-        std::tuple<int, int, int, RGBA *, RayScene *, Canvas2D *, float, float, glm::mat4> args);
+        std::tuple<int, int, int, RGBA *, RGBAfloat *, RayScene *, Canvas2D *, float, float, glm::mat4> args);
     // Ray trace a full scan line with super sampling
     static bool traceScanLineSuperSampled(
-        std::tuple<int, int, int, RGBA *, RayScene *, Canvas2D *, float, float, glm::mat4> args);
+        std::tuple<int, int, int, RGBA *, RGBAfloat *, RayScene *, Canvas2D *, float, float, glm::mat4> args);
     // Ray trace from a screen space point and return the color
-    static RGBA
-    traceScreenSpacePoint(float u, float v, glm::mat4 cameraViewMatrix, RayScene *scene);
+    static RGBAfloat traceScreenSpacePoint(float u, float v, glm::mat4 cameraViewMatrix, RayScene *scene);
 
   private:
-    static RGBA calculateLightingEquation(std::optional<TraceResult> intersection,
+    static RGBAfloat calculateLightingEquation(std::optional<TraceResult> intersection,
                                           RayScene *scene,
                                           glm::vec4 P,
                                           glm::vec4 d,

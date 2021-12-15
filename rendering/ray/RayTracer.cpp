@@ -1,4 +1,4 @@
-#include "RayTracer.h"
+﻿#include "RayTracer.h"
 
 #include "Canvas2D.h"
 #include "glm/gtx/string_cast.hpp"
@@ -105,7 +105,7 @@ bool RayTracer::checkOcclusionForRay(glm::vec3 point, glm::vec3 ray, RayScene *s
     }
 }
 
-RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult,
+RGBAfloat RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult,
                                           RayScene *scene,
                                           glm::vec4 P,
                                           glm::vec4 d,
@@ -114,7 +114,7 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
     // If there is no intersection, return black
     if (traceResult == std::nullopt) {
         if(!scene->getEnvironmentMap().isUsed) {
-            return RGBA(0, 0, 0, 1);
+            return RGBAfloat(0.0, 0.0, 0.0, 1.0);
         } else {
             IntersectResult interRes = ImplicitCube().intersectRay(glm::vec4(0),d);
             QImage img;
@@ -146,7 +146,10 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
             }
 
             QColor pixel = img.pixel(s, t);
-            return RGBA(pixel.red(),pixel.green(),pixel.blue(),255);
+            return RGBAfloat(pixel.red()/255.0,
+                             pixel.green()/255.0,
+                             pixel.blue()/255.0,
+                             1.0);
         }
     }
     TraceResult intersection = traceResult.value();
@@ -186,6 +189,8 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
             }
 
             // Ignore this light if it's occluded
+
+             //TODO:TRANSP add transparency information into this
             if (settings.useShadows &&
                 RayTracer::checkOcclusionBetweenPoints(
                     glm::vec3(intersectionPoint), glm::vec3(light.pos), scene)) {
@@ -206,7 +211,8 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
                 continue;
             }
 
-            // Ignore this light if it's occluded TODO add transparency information into this
+            // Ignore this light if it's occluded
+            //TODO:TRANSP add transparency information into this
             if (settings.useShadows && RayTracer::checkOcclusionForRay(glm::vec3(intersectionPoint),
                                                                        glm::vec3(-light.dir),
                                                                        scene)) {
@@ -287,11 +293,11 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
             newRayOriginPoint, glm::vec4(reflectedRay, 0), depth - 1, scene);
 
         // calculate lighting equation for reflection
-        RGBA reflectedColor = RayTracer::calculateLightingEquation(
+        RGBAfloat reflectedColor = RayTracer::calculateLightingEquation(
             result, scene, newRayOriginPoint, glm::vec4(reflectedRay, 0), depth - 1);
 
         // add reflection to final color
-        color += ks * glm::vec3(mat.cReflective) * (RGBA::toVec(reflectedColor) / 255.0f);
+        color += ks * glm::vec3(mat.cReflective) * (RGBAfloat::toVec(reflectedColor));
     }
 
     if (settings.useRefraction &&
@@ -326,22 +332,22 @@ RGBA RayTracer::calculateLightingEquation(std::optional<TraceResult> traceResult
             newRayOriginPoint, glm::vec4(refractedRay, 0), depth - 1, scene);
 
         // compute lighting equation for refraction
-        RGBA refractedColor = RayTracer::calculateLightingEquation(
+        RGBAfloat refractedColor = RayTracer::calculateLightingEquation(
             result, scene, newRayOriginPoint, glm::vec4(refractedRay, 0), depth - 1);
 
         // add refraction to final color
-        color += kt * glm::vec3(mat.cTransparent) * (RGBA::toVec(refractedColor) / 255.0f);
+        color += kt * glm::vec3(mat.cTransparent) * (RGBAfloat::toVec(refractedColor));
     }
 
-    // Scale and clamp values to the range [0,255]
-    return RGBA(std::min(255.0f, std::max(0.0f, color.r) * 255.0f),
-                std::min(255.0f, std::max(0.0f, color.g) * 255.0f),
-                std::min(255.0f, std::max(0.0f, color.b) * 255.0f),
-                255.0f);
+    // Scale and clamp values to the range [0,1]
+    return RGBAfloat(std::max(0.0f, color.r),
+                     std::max(0.0f, color.g),
+                     std::max(0.0f, color.b),
+                     1.0f);
 }
 
 // Given a point in screen space, calculate the color via ray tracing
-RGBA RayTracer::traceScreenSpacePoint(float u,
+RGBAfloat RayTracer::traceScreenSpacePoint(float u,
                                       float v,
                                       glm::mat4 cameraViewMatrix,
                                       RayScene *scene) {
@@ -358,32 +364,36 @@ RGBA RayTracer::traceScreenSpacePoint(float u,
     // Trace the ray and return the color
     std::optional<TraceResult> result =
         RayTracer::traceRayFromPoint(worldSpaceEye, worldSpaceD, REFLECTION_DEPTH, scene);
-    return RayTracer::calculateLightingEquation(
+    RGBAfloat ret = RayTracer::calculateLightingEquation(
         result, scene, worldSpaceEye, worldSpaceD, REFLECTION_DEPTH);
+    return ret;
 }
 
 bool RayTracer::traceScanLine(
-    std::tuple<int, int, int, RGBA *, RayScene *, Canvas2D *, float, float, glm::mat4> args) {
+    std::tuple<int, int, int, RGBA *, RGBAfloat *, RayScene *, Canvas2D *, float, float, glm::mat4> args) {
 
     // Args have to be wrapped in a tuple so we can call this function via QTConcurrent::mapped
     int row = std::get<0>(args);
     int width = std::get<1>(args);
     int height = std::get<2>(args);
     RGBA *pix = std::get<3>(args);
-    RayScene *scene = std::get<4>(args);
-    Canvas2D *canvas = std::get<5>(args);
-    float viewAngleHeight = std::get<6>(args);
-    float viewAngleWidth = std::get<7>(args);
-    glm::mat4 cameraViewMatrix = std::get<8>(args);
+    RGBAfloat *post_pix = std::get<4>(args);
+    RayScene *scene = std::get<5>(args);
+    Canvas2D *canvas = std::get<6>(args);
+    float viewAngleHeight = std::get<7>(args);
+    float viewAngleWidth = std::get<8>(args);
+    glm::mat4 cameraViewMatrix = std::get<9>(args);
 
     // For each pixel in this scan line, calculate the color via ray tracing and store it in the
     // canvas
     for (int col = 0; col < width; col++) {
-        pix[row * width + col] = RayTracer::traceScreenSpacePoint(
+        RGBAfloat result = RayTracer::traceScreenSpacePoint(
             2 * K * tan(glm::radians(viewAngleWidth) / 2.0) * ((col + 0.5) / width - 0.5),
             2 * K * tan(glm::radians(viewAngleHeight) / 2.0) * (0.5 - ((row + 0.5) / height)),
             cameraViewMatrix,
             scene);
+        pix[row * width + col] = result;
+        post_pix[row * width + col] = result;
     }
 
     // Update canvas and process events to maintain interactivity
@@ -395,18 +405,19 @@ bool RayTracer::traceScanLine(
 }
 
 bool RayTracer::traceScanLineSuperSampled(
-    std::tuple<int, int, int, RGBA *, RayScene *, Canvas2D *, float, float, glm::mat4> args) {
+    std::tuple<int, int, int, RGBA *, RGBAfloat *, RayScene *, Canvas2D *, float, float, glm::mat4> args) {
 
     // Args have to be wrapped in a tuple so we can call this function via QTConcurrent::mapped
     int row = std::get<0>(args);
     int width = std::get<1>(args);
     int height = std::get<2>(args);
     RGBA *pix = std::get<3>(args);
-    RayScene *scene = std::get<4>(args);
-    Canvas2D *canvas = std::get<5>(args);
-    float viewAngleHeight = std::get<6>(args);
-    float viewAngleWidth = std::get<7>(args);
-    glm::mat4 cameraViewMatrix = std::get<8>(args);
+    RGBAfloat *post_pix = std::get<4>(args);
+    RayScene *scene = std::get<5>(args);
+    Canvas2D *canvas = std::get<6>(args);
+    float viewAngleHeight = std::get<7>(args);
+    float viewAngleWidth = std::get<8>(args);
+    glm::mat4 cameraViewMatrix = std::get<9>(args);
 
     // For each pixel on this line, super sample by tracing four points within the pixel and
     // averaging the resulting RGBA

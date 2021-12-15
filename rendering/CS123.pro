@@ -32,6 +32,7 @@ SOURCES += \
     camera/CamtransCamera.cpp \
     camera/QuaternionCamera.cpp \
     filter/Filter.cpp \
+    filter/FilterUtils.cpp \
     ray/ImplicitCone.cpp \
     ray/ImplicitCube.cpp \
     ray/ImplicitCylinder.cpp \
@@ -95,6 +96,7 @@ HEADERS += \
     camera/CamtransCamera.h \
     camera/QuaternionCamera.h \
     filter/Filter.h \
+    filter/FilterUtils.h \
     ray/ImplicitCone.h \
     ray/ImplicitCube.h \
     ray/ImplicitCylinder.h \

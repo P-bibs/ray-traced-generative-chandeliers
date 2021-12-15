@@ -7,6 +7,7 @@ release/OrbitingCamera.o
 release/CamtransCamera.o
 release/QuaternionCamera.o
 release/Filter.o
+release/FilterUtils.o
 release/ImplicitCone.o
 release/ImplicitCube.o
 release/ImplicitCylinder.o
