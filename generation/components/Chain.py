@@ -1,9 +1,114 @@
-from shapes.primitives import Cube, Sphere
+from shapes.primitives import Cube, Sphere, Cylinder
 from common import SceneComponent
 from settings import settings
 from shapes.transblock import TransBlock
 from shapes.tree import Tree
 import materials
+import math
+
+class UnevenDemiCurve(SceneComponent):
+    """
+    Like a DemiCurve, but the start and end points can be at different y values. Cylinders
+    will be used to make up the distance, so the end result looks something like the following:
+    
+  start
+    x
+    x
+    x
+    x
+    x         end
+    x          x
+    x          x 
+     x        x  
+        x  x   
+    """
+    def __init__(self, start, end, sides, girth, drop):
+        self.start = start
+        self.end = end
+        self.sides = sides
+        self.girth = girth
+        self.drop = drop
+
+    def scene_rep(self):
+        y_value_of_schwoop = min(self.start[1], self.end[1]) - self.drop
+        schwoop_start = (self.start[0], y_value_of_schwoop, self.start[2])
+        schwoop_end = (self.end[0], y_value_of_schwoop, self.end[2])
+
+        start_y_delta = self.start[1] - y_value_of_schwoop
+        end_y_delta = self.end[1] - y_value_of_schwoop
+
+        start_y_translate = self.start[1] - start_y_delta / 2
+        end_y_translate = self.end[1] - end_y_delta / 2
+
+        cylinder = Cylinder(materials.silver)
+        components = [
+            DemiCurve(schwoop_start, schwoop_end, self.sides, self.girth),
+            TransBlock(cylinder, translate=(self.start[0], start_y_translate, self.start[2]), scale=(self.girth, start_y_delta, self.girth)),
+            TransBlock(cylinder, translate=(self.end[0], end_y_translate, self.end[2]), scale=(self.girth, end_y_delta, self.girth)),
+        ]
+
+        return TransBlock(Tree(components)).scene_rep()
+
+class DemiCurve(SceneComponent):
+    """
+    Creates a half circle between two points. The circle is discretized to a a fixed number
+    of sides. The sides are cylinder with spherical joints. The firth specifies how thick 
+    the cylinders are. Looks like the following:
+    x          x 
+     x        x  
+        x  x     
+    """
+    def __init__(self, start, end, sides, girth):
+        if (start[1] != end[1]):
+            raise ValueError("Start and end points must be on the same y level")
+
+        self.start = start
+        self.end = end
+        self.sides = sides
+        self.girth = girth
+
+    def scene_rep(self):
+        radius = (((self.end[0] - self.start[0]) ** 2 + (self.end[2] - self.start[2]) ** 2) ** 0.5 ) / 2
+        center = ((self.start[0] + self.end[0]) / 2, self.start[1], (self.start[2] + self.end[2]) / 2)
+        
+        cylinder = Cylinder(materials.silver)
+        sphere= Sphere(materials.silver)
+
+
+        theta = math.pi / self.sides
+        edge_offset = radius * math.cos(theta / 2) 
+        side_length = 2 * radius * math.sin(theta / 2)
+
+        side_no_joints =  Tree([TransBlock(cylinder, scale=(self.girth, side_length, self.girth))])
+
+
+        sides = []
+        for i in range(self.sides):
+            angle = math.pi * i / self.sides + theta / 2
+            x = math.cos(angle) * edge_offset
+            z = 0
+            y = -math.sin(angle) * edge_offset
+            sides.append(TransBlock(side_no_joints, translate=(x,y,z), rotate=(0,0,-1, math.degrees(angle) )))
+
+        joints = []
+        for i in range(self.sides + 1):
+            angle = math.pi * i / self.sides
+            x = math.cos(angle) * radius
+            z = 0
+            y = -math.sin(angle) * radius
+            joints.append(TransBlock(sphere, translate=(x,y,z), scale=(self.girth, self.girth, self.girth)))
+
+
+        rotation = math.degrees(math.atan2(self.end[2] - self.start[2], self.end[0] - self.start[0]))
+
+        full_layer = TransBlock(
+            Tree(sides + joints),
+            (0,-1,0,rotation),
+            center,
+            (1,1,1)
+        )
+
+        return full_layer.scene_rep()
 
 
 class TiltedSphereChain(SceneComponent):
@@ -13,7 +118,7 @@ class TiltedSphereChain(SceneComponent):
         self.count = count
 
     def scene_rep(self):
-        sphere = Sphere(materials.bronze)
+        sphere = Sphere(materials.gold)
         start_to_end = (
             self.end[0] - self.start[0],
             self.end[1] - self.start[1],
