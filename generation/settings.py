@@ -6,11 +6,11 @@ class Settings():
         self.specular = 1
         self.ambient = 1
         self.transparent = 1
-        self.camera_position = [0, 2, -10]
-        self.camera_focus = [0, 0, 1]
+        self.camera_position = [0, 1, -10]
+        self.camera_focus = [0, 0.1, 1]
         self.camera_angle = 45
 
-        self.environment_map = "../assets/niagara/"
+        self.environment_map = "../assets/fireplace"
 
         self.default_diffuse = (1.0, 1.0, 1.0)
         self.default_specular = (0.7, 0.7, 0.7)
