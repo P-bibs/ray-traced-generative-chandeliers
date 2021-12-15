@@ -1,0 +1,5821 @@
+<scenefile>
+<globaldata>
+<diffusecoeff v="1"/>
+<specularcoeff v="1"/>
+<ambientcoeff v="1"/>
+<transparentcoeff v="1"/>
+</globaldata>
+<environmentdata>
+<folderpath folderpath="../assets/fireplace"/>
+</environmentdata>
+<cameradata>
+<pos x="0" y="1" z="-10"/>
+<look x="0" y="0.1" z="1"/>
+<up x="0" y="1" z="0"/>
+<heightangle v="45"/>
+</cameradata>
+
+<lightdata>
+<id v="1" />
+<position x="1.9562952014676114" y="3.875" z="0.41582338163551863"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="2" />
+<position x="1.618033988749895" y="3.875" z="1.1755705045849463"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="3" />
+<position x="1.0000000000000002" y="3.875" z="1.7320508075688772"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="4" />
+<position x="0.20905692653530691" y="3.875" z="1.9890437907365466"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="5" />
+<position x="-0.6180339887498947" y="3.875" z="1.9021130325903073"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="6" />
+<position x="-1.3382612127177158" y="3.875" z="1.486289650954789"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="7" />
+<position x="-1.8270909152852015" y="3.875" z="0.8134732861516009"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="8" />
+<position x="-2.0" y="3.875" z="2.4492935982947064e-16"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="9" />
+<position x="-1.8270909152852022" y="3.875" z="-0.8134732861515996"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="10" />
+<position x="-1.338261212717717" y="3.875" z="-1.486289650954788"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="11" />
+<position x="-0.6180339887498951" y="3.875" z="-1.902113032590307"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="12" />
+<position x="0.20905692653530597" y="3.875" z="-1.9890437907365468"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="13" />
+<position x="1.0000000000000002" y="3.875" z="-1.7320508075688772"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="14" />
+<position x="1.6180339887498956" y="3.875" z="-1.1755705045849452"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<lightdata>
+<id v="15" />
+<position x="1.9562952014676114" y="3.875" z="-0.41582338163551796"/>
+<color r="1" g="0.7" b="0"/>
+</lightdata>
+
+<object type="tree" name="root">
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="3" z="0"/>
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0.8090169943749475" y="0" z="0.0"/>
+    <rotate x="0" y="-1" z="0" angle="90.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.1" y="1.1755705045849463" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.25000000000000006" y="0" z="0.7694208842938134"/>
+    <rotate x="0" y="-1" z="0" angle="162.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.1" y="1.1755705045849463" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6545084971874736" y="0" z="0.4755282581475769"/>
+    <rotate x="0" y="-1" z="0" angle="234.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.1" y="1.1755705045849463" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6545084971874738" y="0" z="-0.4755282581475767"/>
+    <rotate x="0" y="-1" z="0" angle="306.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.1" y="1.1755705045849463" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.24999999999999986" y="0" z="-0.7694208842938134"/>
+    <rotate x="0" y="-1" z="0" angle="378.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.1" y="1.1755705045849463" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.8090169943749475" y="0" z="0.5877852522924731"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.30901699437494734" y="0" z="0.9510565162951536"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.0" y="0" z="1.2246467991473532e-16"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.30901699437494756" y="0" z="-0.9510565162951535"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.8090169943749473" y="0" z="-0.5877852522924734"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="2" z="0"/>
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="1.9562952014676114" y="0" z="0.0"/>
+    <rotate x="0" y="-1" z="0" angle="90.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.7871645951087531" y="0" z="0.7956969431102324"/>
+    <rotate x="0" y="-1" z="0" angle="114.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.3090169943749475" y="0" z="1.4538106560769117"/>
+    <rotate x="0" y="-1" z="0" angle="138.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.6045284632676535" y="0" z="1.860547299152712"/>
+    <rotate x="0" y="-1" z="0" angle="162.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.2044885311072937" y="0" z="1.9455784116634272"/>
+    <rotate x="0" y="-1" z="0" angle="186.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.9781476007338052" y="0" z="1.694201341772548"/>
+    <rotate x="0" y="-1" z="0" angle="210.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.582676064001459" y="0" z="1.1498814685531948"/>
+    <rotate x="0" y="-1" z="0" angle="234.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.9135454576426012" y="0" z="0.4067366430758002"/>
+    <rotate x="0" y="-1" z="0" angle="258.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.9135454576426012" y="0" z="-0.4067366430757997"/>
+    <rotate x="0" y="-1" z="0" angle="282.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.5826760640014594" y="0" z="-1.1498814685531944"/>
+    <rotate x="0" y="-1" z="0" angle="306.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.9781476007338066" y="0" z="-1.6942013417725474"/>
+    <rotate x="0" y="-1" z="0" angle="330.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.20448853110729545" y="0" z="-1.945578411663427"/>
+    <rotate x="0" y="-1" z="0" angle="353.99999999999994"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.6045284632676531" y="0" z="-1.860547299152712"/>
+    <rotate x="0" y="-1" z="0" angle="378.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.309016994374948" y="0" z="-1.4538106560769115"/>
+    <rotate x="0" y="-1" z="0" angle="402.00000000000006"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.7871645951087534" y="0" z="-0.7956969431102324"/>
+    <rotate x="0" y="-1" z="0" angle="426.0"/>
+    
+    <object type="tree">
+    <transblock>
+    
+    <rotate x="0" y="0" z="-1" angle="90"/>
+    <scale x="0.15" y="0.8316467632710373" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.9562952014676114" y="0" z="0.41582338163551863"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.618033988749895" y="0" z="1.1755705045849463"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.0000000000000002" y="0" z="1.7320508075688772"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.20905692653530691" y="0" z="1.9890437907365466"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6180339887498947" y="0" z="1.9021130325903073"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.3382612127177158" y="0" z="1.486289650954789"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.8270909152852015" y="0" z="0.8134732861516009"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-2.0" y="0" z="2.4492935982947064e-16"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.8270909152852022" y="0" z="-0.8134732861515996"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.338261212717717" y="0" z="-1.486289650954788"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6180339887498951" y="0" z="-1.902113032590307"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.20905692653530597" y="0" z="-1.9890437907365468"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.0000000000000002" y="0" z="-1.7320508075688772"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.6180339887498956" y="0" z="-1.1755705045849452"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.9562952014676114" y="0" z="-0.41582338163551796"/>
+    
+    <scale x="0.15" y="0.15" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0.8427260358072369" y="2.9583333333333335" z="0.6122763044713262"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.9101441186718159" y="2.875" z="0.6612584088290323"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.9775622015363948" y="2.7916666666666665" z="0.7102405131867384"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.044980284400974" y="2.7083333333333335" z="0.7592226175444445"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.1123983672655529" y="2.625" z="0.8082047219021505"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.1798164501301316" y="2.5416666666666665" z="0.8571868262598566"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.2472345329947105" y="2.4583333333333335" z="0.9061689306175627"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.3146526158592895" y="2.375" z="0.9551510349752689"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.3820706987238687" y="2.2916666666666665" z="1.0041331393329749"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.4494887815884474" y="2.2083333333333335" z="1.053115243690681"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.5169068644530266" y="2.125" z="1.102097348048387"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.5843249473176053" y="2.0416666666666665" z="1.1510794524060932"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="-0.3218927024739035" y="2.9583333333333335" z="0.990683871140785"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.34764411867181577" y="2.875" z="1.0699385808320478"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.37339553486972804" y="2.7916666666666665" z="1.1491932905233107"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.3991469510676403" y="2.7083333333333335" z="1.2284480002145735"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.4248983672655526" y="2.625" z="1.3077027099058363"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.45064978346346485" y="2.5416666666666665" z="1.386957419597099"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.4764011996613772" y="2.4583333333333335" z="1.4662121292883619"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5021526158592895" y="2.375" z="1.5454668389796247"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5279040320572017" y="2.2916666666666665" z="1.6247215486708875"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5536554482551139" y="2.2083333333333335" z="1.7039762583621503"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5794068644530262" y="2.125" z="1.783230968053413"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6051582806509386" y="2.0416666666666665" z="1.8624856777446759"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="-1.0416666666666667" y="2.9583333333333335" z="1.2756737491118262e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.125" y="2.875" z="1.3777276490407724e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.2083333333333333" y="2.7916666666666665" z="1.4797815489697183e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.2916666666666667" y="2.7083333333333335" z="1.5818354488986645e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.375" y="2.625" z="1.6838893488276108e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.4583333333333333" y="2.5416666666666665" z="1.7859432487565567e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.5416666666666665" y="2.4583333333333335" z="1.8879971486855027e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.625" y="2.375" z="1.990051048614449e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.7083333333333335" y="2.2916666666666665" z="2.092104948543395e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.7916666666666665" y="2.2083333333333335" z="2.194158848472341e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.875" y="2.125" z="2.296212748401287e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.9583333333333335" y="2.0416666666666665" z="2.3982666483302334e-16"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="-0.3218927024739037" y="2.9583333333333335" z="-0.9906838711407849"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.347644118671816" y="2.875" z="-1.0699385808320476"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.3733955348697283" y="2.7916666666666665" z="-1.1491932905233104"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.3991469510676406" y="2.7083333333333335" z="-1.2284480002145735"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.4248983672655529" y="2.625" z="-1.307702709905836"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.4506497834634652" y="2.5416666666666665" z="-1.3869574195970988"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.4764011996613775" y="2.4583333333333335" z="-1.4662121292883616"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5021526158592897" y="2.375" z="-1.5454668389796244"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5279040320572022" y="2.2916666666666665" z="-1.6247215486708875"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5536554482551144" y="2.2083333333333335" z="-1.70397625836215"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5794068644530267" y="2.125" z="-1.7832309680534129"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.605158280650939" y="2.0416666666666665" z="-1.8624856777446757"/>
+    
+    <scale x="0.05892556509887897" y="0.05892556509887897" z="0.05892556509887897"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0.8427260358072368" y="2.9583333333333335" z="-0.6122763044713263"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.9101441186718159" y="2.875" z="-0.6612584088290323"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.977562201536395" y="2.7916666666666665" z="-0.7102405131867383"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.044980284400974" y="2.7083333333333335" z="-0.7592226175444443"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.1123983672655529" y="2.625" z="-0.8082047219021503"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.179816450130132" y="2.5416666666666665" z="-0.8571868262598563"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.247234532994711" y="2.4583333333333335" z="-0.9061689306175622"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.31465261585929" y="2.375" z="-0.9551510349752682"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.3820706987238691" y="2.2916666666666665" z="-1.0041331393329742"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.4494887815884478" y="2.2083333333333335" z="-1.05311524369068"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.516906864453027" y="2.125" z="-1.1020973480483862"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.5843249473176062" y="2.0416666666666665" z="-1.1510794524060923"/>
+    
+    <scale x="0.05892556509887895" y="0.05892556509887895" z="0.05892556509887895"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0.775307952942658" y="3.0833333333333335" z="0.5632942001136201"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.707889870078079" y="3.25" z="0.514312095755914"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.6404717872135001" y="3.4166666666666665" z="0.4653299913982079"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.5730537043489211" y="3.5833333333333335" z="0.4163478870405018"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.5056356214843422" y="3.75" z="0.36736578268279574"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.4382175386197632" y="3.9166666666666665" z="0.3183836783250896"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.3707994557551843" y="4.083333333333333" z="0.26940157396738357"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.3033813728906053" y="4.25" z="0.2204194696096774"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.23596329002602634" y="4.416666666666667" z="0.17143736525197129"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.16854520716144739" y="4.583333333333333" z="0.12245526089426528"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.10112712429686843" y="4.75" z="0.07347315653655917"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.03370904143228948" y="4.916666666666667" z="0.024491052178853057"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="-0.2961412862759912" y="3.0833333333333335" z="0.9114291614495222"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.2703898700780789" y="3.25" z="0.8321744517582594"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.24463845388016664" y="3.4166666666666665" z="0.7529197420669966"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.21888703768225437" y="3.5833333333333335" z="0.6736650323757338"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.1931356214843421" y="3.75" z="0.594410322684471"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.1673842052864298" y="3.9166666666666665" z="0.5151556129932082"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.14163278908851754" y="4.083333333333333" z="0.4359009033019454"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.11588137289060524" y="4.25" z="0.3566461936106826"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.09012995669269297" y="4.416666666666667" z="0.2773914839194198"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.0643785404947807" y="4.583333333333333" z="0.198136774228157"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.03862712429686843" y="4.75" z="0.1188820645368942"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.012875708098956107" y="4.916666666666667" z="0.0396273548456314"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="-0.9583333333333334" y="3.0833333333333335" z="1.1736198491828802e-16"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.875" y="3.25" z="1.071565949253934e-16"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.7916666666666666" y="3.4166666666666665" z="9.69512049324988e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.7083333333333333" y="3.5833333333333335" z="8.674581493960419e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.625" y="3.75" z="7.654042494670958e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.5416666666666667" y="3.9166666666666665" z="6.633503495381497e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.45833333333333337" y="4.083333333333333" z="5.612964496092036e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.375" y="4.25" z="4.592425496802574e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.29166666666666663" y="4.416666666666667" z="3.5718864975131134e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.20833333333333337" y="4.583333333333333" z="2.5513474982236526e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.125" y="4.75" z="1.5308084989341918e-17"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.04166666666666663" y="4.916666666666667" z="5.102694996447298e-18"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="-0.2961412862759914" y="3.0833333333333335" z="-0.9114291614495221"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.27038987007807913" y="3.25" z="-0.8321744517582593"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.2446384538801668" y="3.4166666666666665" z="-0.7529197420669965"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.21888703768225454" y="3.5833333333333335" z="-0.6736650323757337"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.1931356214843422" y="3.75" z="-0.594410322684471"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.16738420528642994" y="3.9166666666666665" z="-0.5151556129932082"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.14163278908851765" y="4.083333333333333" z="-0.4359009033019454"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.11588137289060535" y="4.25" z="-0.3566461936106826"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.09012995669269303" y="4.416666666666667" z="-0.2773914839194197"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.06437854049478076" y="4.583333333333333" z="-0.198136774228157"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.03862712429686843" y="4.75" z="-0.1188820645368942"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.012875708098956162" y="4.916666666666667" z="-0.0396273548456314"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0.7753079529426579" y="3.0833333333333335" z="-0.5632942001136203"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.7078898700780789" y="3.25" z="-0.5143120957559142"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.6404717872135" y="3.4166666666666665" z="-0.4653299913982081"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.573053704348921" y="3.5833333333333335" z="-0.41634788704050196"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.505635621484342" y="3.75" z="-0.36736578268279585"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.43821753861976315" y="3.9166666666666665" z="-0.31838367832508974"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.37079945575518425" y="4.083333333333333" z="-0.2694015739673836"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.3033813728906053" y="4.25" z="-0.2204194696096775"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.23596329002602623" y="4.416666666666667" z="-0.1714373652519714"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.16854520716144739" y="4.583333333333333" z="-0.12245526089426528"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.10112712429686843" y="4.75" z="-0.07347315653655917"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.03370904143228948" y="4.916666666666667" z="-0.024491052178853057"/>
+    
+    <scale x="0.09316949906249124" y="0.09316949906249124" z="0.09316949906249124"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    
+    
+    
+    <object type="tree">
+    <transblock>
+    <translate x="0.0" y="5.1" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="5.3" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="5.5" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="5.7" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="5.9" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="6.1" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="6.3" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="6.5" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="6.7" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.0" y="6.9" z="0.0"/>
+    
+    <scale x="0.1" y="0.1" z="0.1"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0.4" g="0.236" b="0.103"/>
+    <specular r="0.77" g="0.458" b="0.2006"/>
+    <ambient r="0.25" g="0.15" b="0.064"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="76.8"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.9562952014676114" y="1.0" z="0.41582338163551863"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="1.618033988749895" y="1.0" z="1.1755705045849463"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="1.0000000000000002" y="1.0" z="1.7320508075688772"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="0.20905692653530691" y="1.0" z="1.9890437907365466"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6180339887498947" y="1.0" z="1.9021130325903073"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-1.3382612127177158" y="1.0" z="1.486289650954789"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-1.8270909152852015" y="1.0" z="0.8134732861516009"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-2.0" y="1.0" z="2.4492935982947064e-16"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-1.8270909152852022" y="1.0" z="-0.8134732861515996"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-1.338261212717717" y="1.0" z="-1.486289650954788"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6180339887498951" y="1.0" z="-1.902113032590307"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="0.20905692653530597" y="1.0" z="-1.9890437907365468"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="1.0000000000000002" y="1.0" z="-1.7320508075688772"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="1.6180339887498956" y="1.0" z="-1.1755705045849452"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="1.9562952014676114" y="1.0" z="-0.41582338163551796"/>
+    <rotate x="1" y="0" z="0" angle="0"/>
+    <scale x="0.1" y="2" z="0.1"/>
+    <object type="primitive" name="cube">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+<transblock>
+    <translate x="1.9562952014676114" y="2" z="0.41582338163551863"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.618033988749895" y="2" z="1.1755705045849463"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.0000000000000002" y="2" z="1.7320508075688772"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.20905692653530691" y="2" z="1.9890437907365466"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6180339887498947" y="2" z="1.9021130325903073"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.3382612127177158" y="2" z="1.486289650954789"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.8270909152852015" y="2" z="0.8134732861516009"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-2.0" y="2" z="2.4492935982947064e-16"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.8270909152852022" y="2" z="-0.8134732861515996"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-1.338261212717717" y="2" z="-1.486289650954788"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="-0.6180339887498951" y="2" z="-1.902113032590307"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0.20905692653530597" y="2" z="-1.9890437907365468"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.0000000000000002" y="2" z="-1.7320508075688772"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.6180339887498956" y="2" z="-1.1755705045849452"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="1.9562952014676114" y="2" z="-0.41582338163551796"/>
+    
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    <translate x="0" y="0.25" z="0"/>
+    
+    <scale x="0.25" y="0.5" z="0.25"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="0.5" z="0"/>
+    <rotate x="1" y="0" z="0" angle="180"/>
+    <scale x="0.5" y="0.5" z="0.5"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cone">
+    <diffuse r="0.27" g="0.27" b="0.27"/>
+    <specular r="0.7739" g="0.7739" b="0.7739"/>
+    <ambient r="0.231" g="0.231" b="0.231"/>
+    <reflective r="0.2" g="0.2" b="0.2"/>
+    <shininess v="89"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.25" z="0"/>
+    
+    <scale x="0.15" y="1" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="1" z="2"/>
+    <object type="primitive" name="cylinder">
+    <diffuse r="0.05" g="0.05" b="0.05"/>
+    <specular r="0.7" g="0.7" b="0.7"/>
+    <ambient r="0.05" g="0.05" b="0.05"/>
+    <shininess v="10"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+<transblock>
+    <translate x="0" y="1.875" z="0"/>
+    
+    <scale x="0.15" y="0.25" z="0.15"/>
+    <object type="tree">
+    <transblock>
+    
+    
+    <scale x="2" y="2" z="2"/>
+    <object type="primitive" name="sphere">
+    <diffuse r="0" g="0" b="0"/>
+    <specular r="0.2" g="0.2" b="0.2"/>
+    <reflective r="0.3" g="0.3" b="0.3"/>
+    <transparent r="0.7" g="0.7" b="0.7"/>
+    <shininess v="15"/>
+    <ior v="1.03"/></object>
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object >
+
+</transblock>
+
+</object>
+</scenefile>

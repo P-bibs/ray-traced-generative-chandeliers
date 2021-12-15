@@ -1,17 +1,20 @@
+import math
 from common import SceneComponent
 from shapes.transblock import TransBlock
 from shapes.primitives import Cube, Cylinder, Sphere
 from shapes.tree import Tree
 from settings import settings
+from components.Chain import DiamondChain,  SphereChain, TaperedChain, TaperedSphereChain
 
 class SquareLayer(SceneComponent):
-    def __init__(self, center, radius):
+    def __init__(self, material, center, radius):
+        self.material = material
         self.center = center
         self.radius = radius
 
 
     def scene_rep(self):
-        cube = Cube(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess)
+        cube = Cube(self.material)
         top_side = TransBlock(cube, (0,0,0,0), (0,0,-1), (2.5, 0.5, 0.5))
         bottom_side = TransBlock(cube, (0,0,0,0), (0,0,1), (2.5, 0.5, 0.5))
         left_side = TransBlock(cube, (0,0,0,0), (-1,0,0), (0.5, 0.5, 2.5))
@@ -26,66 +29,71 @@ class SquareLayer(SceneComponent):
 
         return full_layer.scene_rep()
 
-class OctagonLayer(SceneComponent):
-    def __init__(self, center, radius):
+class PolygonLayer(SceneComponent):
+    def __init__(self, material, center, radius, sides, girth):
+        self.material = material
         self.center = center
         self.radius = radius
+        self.sides = sides
+        self.girth = girth
+        r = self.girth
+        self.chain_types = [
+            lambda top: TaperedSphereChain((top[0], top[1] - r / 2, top[2]), 8, r / 2, r / 8),
+            lambda top: TaperedSphereChain((top[0], top[1] - r / 2, top[2]), 4, r / 2, r / 4),
+        ]
+
+    def get_attachment_points_world_space(self):
+        points = []
+        theta = math.pi * 2 / self.sides
+        for i in range(self.sides):
+            angle = 2 * math.pi * i / self.sides + theta / 2
+            x = math.cos(angle) * self.radius
+            y = 0
+            z = math.sin(angle) * self.radius
+            points.append((x + self.center[0], y + self.center[1], z + self.center[2]))
+
+        return points
 
     def scene_rep(self):
-        cylinder = Cylinder(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess)
+        cylinder = Cylinder(self.material)
+        sphere= Sphere(self.material)
 
-        rotation = (1, 0, 0, 90)
 
-        # square root of 2 divided by 2
-        s2d2 = 0.70710678118654757
+        theta = math.pi * 2 / self.sides
+        edge_offset = self.radius * math.cos(theta / 2) 
+        side_length = 2 * self.radius * math.sin(theta / 2)
 
-        parts = [
-            # top_side
-            TransBlock(cylinder, (0,0,1,90), (0,0,-1), (0.5, 1, 0.5)),
-            # bottom_side
-            TransBlock(cylinder, (0,0,1,90), (0,0,1), (0.5, 1, 0.5)),
-            # left_side
-            TransBlock(cylinder, (1,0,0,90), (-1,0,0), (0.5, 1, 0.5)),
-            # right_side
-            TransBlock(cylinder, (1,0,0,90), (1,0,0), (0.5, 1, 0.5)),
-            # top_left_corner
-            TransBlock(cylinder, (1,0,1,90), (-s2d2,0,-s2d2), (0.5, 1, 0.5)),
-            # top_right_corner
-            TransBlock(cylinder, (1,0,-1,90), (s2d2,0,-s2d2), (0.5, 1, 0.5)),
-            # bottom_left_corner
-            TransBlock(cylinder, (1,0,-1,90), (-s2d2,0,s2d2), (0.5, 1, 0.5)),
-            # bottom_right_corner
-            TransBlock(cylinder, (1,0,1,90), (s2d2,0,s2d2), (0.5, 1, 0.5))
-        ]
+        side_no_joints =  Tree([TransBlock(cylinder, rotate=(0,0,-1,90), scale=(self.girth, side_length, self.girth))])
 
-        sphere= Sphere(diffuse=settings.default_diffuse, specular=settings.default_specular, ambient=settings.default_ambient, shininess=settings.default_shininess)
-        r = 0.6
-        short_off = 0.35
-        long_off = 1
-        joints = [
-            # top left
-            TransBlock(sphere, (0,0,0,0), (-short_off,0,-long_off), (r, r, r)),
-            # top right
-            TransBlock(sphere, (0,0,0,0), (short_off,0,-long_off), (r, r, r)),
-            # bottom left
-            TransBlock(sphere, (0,0,0,0), (-short_off,0,long_off), (r, r, r)),
-            # bottom right
-            TransBlock(sphere, (0,0,0,0), (short_off,0,long_off), (r, r, r)),
-            # left top
-            TransBlock(sphere, (0,0,0,0), (-long_off,0,-short_off), (r, r, r)),
-            # left bottom
-            TransBlock(sphere, (0,0,0,0), (-long_off,0,short_off), (r, r, r)),
-            # right top
-            TransBlock(sphere, (0,0,0,0), (long_off,0,-short_off), (r, r, r)),
-            # right bottom
-            TransBlock(sphere, (0,0,0,0), (long_off,0,short_off), (r, r, r))
-        ]
+
+        sides = []
+        for i in range(self.sides):
+            angle = 2 * math.pi * i / self.sides
+            x = math.cos(angle) * edge_offset
+            y = 0
+            z = math.sin(angle) * edge_offset
+            sides.append(TransBlock(side_no_joints, translate=(x,y,z), rotate=(0,-1,0, math.degrees(angle) + 90)))
+
+        joints = []
+        for i in range(self.sides):
+            angle = 2 * math.pi * i / self.sides + theta / 2
+            x = math.cos(angle) * self.radius
+            y = 0
+            z = math.sin(angle) * self.radius
+            joints.append(TransBlock(sphere, translate=(x,y,z), scale=(self.girth, self.girth, self.girth)))
+
+        chains = []
+        # for i, joint in enumerate(joints):
+        #     chain_type = self.chain_types[i % len(self.chain_types)]
+        #     top = joint.translate
+            
+        #     chains.append(chain_type(top))
 
         full_layer = TransBlock(
-            Tree(parts + joints),
+            Tree(sides + joints + chains),
             (0,0,0,0),
             self.center,
-            (self.radius, self.radius, self.radius)
+            (1,1,1)
         )
 
         return full_layer.scene_rep()

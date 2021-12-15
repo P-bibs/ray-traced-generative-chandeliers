@@ -1,7 +1,10 @@
 from common import SceneComponent
 from settings import settings
+from shapes.transblock import TransBlock
+from shapes.tree import Tree
+import materials
 
-def format_inner_properties(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
+def format_inner_properties(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None, refraction=None):
     concatenated = []
     if diffuse:
         concatenated.append('<diffuse r="{}" g="{}" b="{}"/>'.format(diffuse[0], diffuse[1], diffuse[2]))
@@ -20,40 +23,35 @@ def format_inner_properties(diffuse=None, specular=None, ambient=None, reflectiv
 
     if shininess:
         concatenated.append('<shininess v="{}"/>'.format(shininess))
+
+    if refraction:
+        concatenated.append('<ior v="{}"/>'.format(refraction))
     
     return '\n'.join(["    " + s for s in concatenated])
 
 valid_primitives = ["cube", "sphere", "cylinder", "cone", "torus"]
 class Primitive(SceneComponent):
-    def __init__(self, type, diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
+    def __init__(self, type, material):
         if type not in valid_primitives:
             raise ValueError("Invalid primitive type: {}".format(type))
         self.type = type
-        self.diffuse = diffuse 
-        self.specular = specular
-        self.ambient = ambient
-        self.reflective = reflective
-        self.transparent = transparent
-        self.shininess = shininess
+        self.material = material
 
     def scene_rep(self):
         return (
             '<object type="primitive" name="{}">\n'
             '{}'
             '</object>\n'
-        ).format(self.type, format_inner_properties(self.diffuse, self.specular, self.ambient, self.reflective, self.transparent, self.shininess))
+        ).format(self.type, self.material.scene_rep())
 
-def Cube(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
-    return Primitive("cube", diffuse, specular, ambient, reflective, transparent, shininess)
+def Cube(material):
+    return Primitive("cube", material)
 
-def Sphere(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
-    return Primitive("sphere", diffuse, specular, ambient, reflective, transparent, shininess)
+def Sphere(material):
+    return Tree([TransBlock(Primitive("sphere", material), scale=(2,2,2))])
 
-def Cylinder(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
-    return Primitive("cylinder", diffuse, specular, ambient, reflective, transparent, shininess)
+def Cylinder(material):
+    return Tree([TransBlock(Primitive("cylinder", material), scale=(2,1,2))])
 
-def Cone(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
-    return Primitive("cone", diffuse, specular, ambient, reflective, transparent, shininess)
-
-def Cone(diffuse=None, specular=None, ambient=None, reflective=None, transparent=None, shininess=None):
-    return Primitive("cone", diffuse, specular, ambient, reflective, transparent, shininess)
+def Cone(material):
+    return Tree([TransBlock(Primitive("cone", material), scale=(2,1,2))])

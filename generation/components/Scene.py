@@ -1,50 +1,9 @@
 from common import SceneComponent
 from components.Chandelier import Chandelier
 from settings import settings
+import context
+from context import PointLight, DirectionalLight
 
-class PointLight(SceneComponent):
-    def __init__(self, id, color, position):
-        self.id = id
-        self.color = color
-        self.position = position
-
-    def scene_rep(self):
-        return ('<lightdata>\n'
-                '<id v="{}" />\n'
-                '<position x="{}" y="{}" z="{}"/>\n'
-                '<color r="{}" g="{}" b="{}"/>\n'
-                '</lightdata>\n'
-                ).format(
-                    self.id,
-                    self.position[0],
-                    self.position[1],
-                    self.position[2],
-                    self.color[0],
-                    self.color[1],
-                    self.color[2])
-                    
-
-class DirectionalLight(SceneComponent):
-    def __init__(self, id, color, direction):
-        self.id = id
-        self.color = color
-        self.direction = direction
-
-    def scene_rep(self):
-        return ('<lightdata>\n'
-                '<id v="{}" />\n'
-                '<type v="directional"/>\n'
-                '<color r="{}" g="{}" b="{}"/>\n'
-                '<direction x="{}" y="{}" z="{}"/>\n'
-                '</lightdata>\n'
-                ).format(
-            self.id,
-            self.color[0],
-            self.color[1],
-            self.color[2],
-            self.direction[0],
-            self.direction[1],
-            self.direction[2])
 
 class Camera(SceneComponent):
     def __init__(self, position, focus, up, height_angle):
@@ -77,25 +36,27 @@ class Scene(SceneComponent):
         self.diffuse = settings.diffuse 
         self.specular = settings.specular 
         self.ambient = settings.ambient 
+        self.transparent = settings.transparent
         self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
-        self.lights = [
-            PointLight(1, (1, 1, 1), (10, 0, 0)),
-            PointLight(2, (1, 1, 1), (0, 0, 10)),
-            PointLight(3, (1, 1, 1), (-10, 0, 0)),
-            PointLight(4, (1, 1, 1), (0, 0, -10)),
-            DirectionalLight(5, (1, 1, 1), (-1, -1, -1)),
-        ]
+
+        self.env_map = settings.environment_map
+
         self.chandelier = Chandelier()
 
     def scene_rep(self):
-        light_data = [light.scene_rep() for light in self.lights]
+        chandelier = self.chandelier.scene_rep()
+        light_data = [light.scene_rep() for light in context.get_lights()]
         light_data = '\n'.join(light_data)
         return ('<scenefile>\n'
                 '<globaldata>\n'
                 '<diffusecoeff v="{}"/>\n'
                 '<specularcoeff v="{}"/>\n'
                 '<ambientcoeff v="{}"/>\n'
+                '<transparentcoeff v="{}"/>\n'
                 '</globaldata>\n'
+                '<environmentdata>\n'
+                '<folderpath folderpath="{}"/>\n'
+                '</environmentdata>\n'
                 '{}\n'
                 '{}\n'
                 '<object type="tree" name="root">\n'
@@ -106,8 +67,10 @@ class Scene(SceneComponent):
                     self.diffuse,
                     self.specular,
                     self.ambient,
+                    self.transparent,
+                    self.env_map,
                     self.camera.scene_rep(),
                     light_data,
-                    self.chandelier.scene_rep())
+                    chandelier)
 
 
