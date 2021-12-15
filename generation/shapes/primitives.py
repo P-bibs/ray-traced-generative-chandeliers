@@ -54,4 +54,4 @@ def Cylinder(material):
     return Tree([TransBlock(Primitive("cylinder", material), scale=(2,1,2))])
 
 def Cone(material):
-    return Tree([TransBlock(Primitive("cylinder", material), scale=(2,1,2))])
+    return Tree([TransBlock(Primitive("cone", material), scale=(2,1,2))])
