@@ -71,3 +71,10 @@ glass = Material(
     reflective=(0.3,0.3,0.3),
     refraction=1.03
 )
+
+wax = Material(
+    ambient=(0.05, 0.05, 0.05),
+    diffuse=(0.05,0.05,0.05),
+    specular=(0.7,0.7,0.7),
+    shininess=10
+)
