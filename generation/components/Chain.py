@@ -3,7 +3,6 @@ from common import SceneComponent
 from settings import settings
 from shapes.transblock import TransBlock
 from shapes.tree import Tree
-import materials
 import math
 
 class UnevenDemiCurve(SceneComponent):
@@ -22,7 +21,8 @@ class UnevenDemiCurve(SceneComponent):
      x        x  
         x  x   
     """
-    def __init__(self, start, end, sides, girth, drop):
+    def __init__(self, material, start, end, sides, girth, drop):
+        self.material = material
         self.start = start
         self.end = end
         self.sides = sides
@@ -40,9 +40,9 @@ class UnevenDemiCurve(SceneComponent):
         start_y_translate = self.start[1] - start_y_delta / 2
         end_y_translate = self.end[1] - end_y_delta / 2
 
-        cylinder = Cylinder(materials.silver)
+        cylinder = Cylinder(self.material)
         components = [
-            DemiCurve(schwoop_start, schwoop_end, self.sides, self.girth),
+            DemiCurve(self.material, schwoop_start, schwoop_end, self.sides, self.girth),
             TransBlock(cylinder, translate=(self.start[0], start_y_translate, self.start[2]), scale=(self.girth, start_y_delta, self.girth)),
             TransBlock(cylinder, translate=(self.end[0], end_y_translate, self.end[2]), scale=(self.girth, end_y_delta, self.girth)),
         ]
@@ -58,10 +58,11 @@ class DemiCurve(SceneComponent):
      x        x  
         x  x     
     """
-    def __init__(self, start, end, sides, girth):
+    def __init__(self, material, start, end, sides, girth):
         if (start[1] != end[1]):
             raise ValueError("Start and end points must be on the same y level")
 
+        self.material = material
         self.start = start
         self.end = end
         self.sides = sides
@@ -71,8 +72,8 @@ class DemiCurve(SceneComponent):
         radius = (((self.end[0] - self.start[0]) ** 2 + (self.end[2] - self.start[2]) ** 2) ** 0.5 ) / 2
         center = ((self.start[0] + self.end[0]) / 2, self.start[1], (self.start[2] + self.end[2]) / 2)
         
-        cylinder = Cylinder(materials.silver)
-        sphere= Sphere(materials.silver)
+        cylinder = Cylinder(self.material)
+        sphere= Sphere(self.material)
 
 
         theta = math.pi / self.sides
@@ -112,13 +113,14 @@ class DemiCurve(SceneComponent):
 
 
 class TiltedSphereChain(SceneComponent):
-    def __init__(self, start, end, count):
+    def __init__(self, material, start, end, count):
+        self.material = material
         self.start = start
         self.end = end
         self.count = count
 
     def scene_rep(self):
-        sphere = Sphere(materials.gold)
+        sphere = Sphere(self.material)
         start_to_end = (
             self.end[0] - self.start[0],
             self.end[1] - self.start[1],
@@ -146,35 +148,36 @@ class TiltedSphereChain(SceneComponent):
 
 
 class CylinderChain(SceneComponent):
-    def __init__(self, top, length, radius):
+    def __init__(self, material, top, length, radius):
+        self.material = material
         self.top = top
         self.length = length
         self.radius = radius
 
     def scene_rep(self):
         return TransBlock(
-            Cube(materials.glass),
+            Cube(self.material),
             translate=(self.top[0], self.top[1] - self.length / 2, self.top[2]),
             rotate=(1, 0, 0, 00),
             scale=(self.radius, self.length, self.radius),
         ).scene_rep()
 
 
-def SphereChain(top, count, radius):
-    sphere = Sphere(materials.silver)
+def SphereChain(material, top, count, radius):
+    sphere = Sphere(material)
     return TaperedChain(sphere, top, count, radius, radius)
 
 
-def TaperedSphereChain(top, count, start_radius, end_radius):
-    sphere = Sphere(materials.silver)
+def TaperedSphereChain(material, top, count, start_radius, end_radius):
+    sphere = Sphere(material)
     return TaperedChain(sphere, top, count, start_radius, end_radius)
 
 
-def DiamondChain(top, count, radius):
+def DiamondChain(material, top, count, radius):
     diamond = Tree(
         [
             TransBlock(
-                Cube(materials.gold),
+                Cube(material),
                 rotate=(-1, -1, 0, 45),
             )
         ]

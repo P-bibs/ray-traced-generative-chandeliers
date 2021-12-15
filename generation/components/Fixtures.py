@@ -8,7 +8,8 @@ import context
 
 
 class Candle(SceneComponent):
-    def __init__(self, base, size):
+    def __init__(self, material, base, size):
+        self.material = material
         self.base = base
         self.size = size
         self.color = (1, 0.7, 0)
@@ -36,13 +37,13 @@ class Candle(SceneComponent):
         parts = [
             # stand
             TransBlock(
-                Cylinder(materials.silver),
+                Cylinder(self.material),
                 translate=(0, stand_translate, 0),
                 scale=(self.stand_radius, self.stand_height, self.stand_radius),
             ),
             # base
             TransBlock(
-                Cone(materials.silver),
+                Cone(self.material),
                 translate=(0, base_translate, 0),
                 scale=(self.base_radius, self.base_height, self.base_radius),
                 rotate=(1, 0, 0, 180),
