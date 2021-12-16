@@ -321,17 +321,17 @@ void Canvas2D::renderImage(CS123SceneCameraData *camera, int width, int height) 
                 float luminosity = (0.299f * color.r) +
                                    (0.587f * color.g) +
                                    (0.114f * color.b);
-                if (luminosity < 0.9) {
+                if (luminosity < 1.1) {
                    post_proc_pix[centerIndex] = RGBAfloat(0,0,0,1.0);
                 } else {
-                   float scaleFactor = 0.3;
+                   float scaleFactor = 2;
                    RGBAfloat res = post_proc_pix[centerIndex].operator*(RGBAfloat(glm::vec3(scaleFactor)));
                    post_proc_pix[centerIndex] = res;
                 }
             }
         }
         //Step 2: Apply bloom filter to post_proc_pix
-        FilterUtils::blur(post_proc_pix,width,height,100);
+        FilterUtils::blur(post_proc_pix,width,height,50);
 
         //Step 3: Add bloom result back into pix
         for (int row = 0; row < height; row++) {
