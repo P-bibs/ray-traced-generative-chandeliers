@@ -2,9 +2,9 @@
 
 class Settings():
     def __init__(self):
-        self.diffuse = 1
+        self.diffuse = 0.6
         self.specular = 1
-        self.ambient = 1
+        self.ambient = 0.5
         self.transparent = 1
         self.camera_position = [0, 1, -10]
         self.camera_focus = [0, 0.1, 1]
