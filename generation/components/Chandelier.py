@@ -1,9 +1,10 @@
+import sys
 from settings import settings
 import materials
 from common import SceneComponent
-from components.Layers import PolygonLayer, SquareLayer
-from components.Chain import CylinderChain, DiamondChain, SphereChain, TaperedChain, TaperedSphereChain, TiltedSphereChain, DemiCurve, UnevenDemiCurve
-from shapes.primitives import Cube, Cone
+from components.Layers import PolygonLayer
+from components.Chain import CylinderChain, DiamondChain, TaperedSphereChain, TiltedSphereChain, DemiCurve, UnevenDemiCurve
+from shapes.primitives import Cube
 from shapes.transblock import TransBlock
 from shapes.tree import Tree
 from components.Fixtures import Candle
@@ -95,19 +96,13 @@ def chandelier3():
 
     layer1 = PolygonLayer(materials.silver, (0, 3, 0),  1, 3, 0.05)
     layer2 = PolygonLayer(materials.silver, (0, 2, 0),  2, 6, 0.1)
-    # layer3 = PolygonLayer(materials.silver, (0, 1, 0),  2.5, 18, 0.05)
 
     points1 = layer1.get_attachment_points_world_space()
     points2 = layer2.get_attachment_points_world_space()
-    # points3 = layer3.get_attachment_points_world_space()
 
     chains = []
     chains += connect_points_with_chains(points1, points2, lambda pt1, pt2: UnevenDemiCurve(materials.silver, pt1, pt2, 3, 0.075, 0.2))
-    # chains += connect_points_with_chains(points2, points3, lambda pt1, pt2: TiltedSphereChain(materials.glass, pt1, pt2, 6))
 
-    dangling_chains = []
-    # for point in points3:
-    #     dangling_chains.append(CylinderChain(materials.glass, point, 2, 0.1))
 
     candles = []
     for point in points2:
@@ -122,7 +117,7 @@ def chandelier3():
         TiltedSphereChain(materials.glass, (0, 4, 0), (0, 7, 0), 10)
     )
 
-    return [layer1, layer2] + chains + dangling_chains + candles + top_chain
+    return [layer1, layer2] + chains + candles + top_chain
 
 def chandelier4():
     return [
@@ -210,14 +205,8 @@ def chandelier6():
         TiltedSphereChain(materials.glass, (0, 7, 0), (0, 0, 0), 30)
     ]
     
-    connecting_chains = []
-    # for point in points3:
-    #     connecting_chains.append(
-    #         TiltedSphereChain(materials.glass, point, (0, 0.4, 0), 6)
-    #     )
-
  
-    return [layer1, layer2, layer3] +  dangling_chains +  top_chain + connecting_chains
+    return [layer1, layer2, layer3] +  dangling_chains +  top_chain
 
 def chandelier7():
     """
@@ -345,7 +334,19 @@ def polygonLayerDemo():
 
 class Chandelier(SceneComponent):
     def __init__(self):
-        self.components = chandelier8()
+        chandeliers = [
+            chandelier1,
+            chandelier2,
+            chandelier3,
+            chandelier4,
+            chandelier5,
+            chandelier6,
+            chandelier7,
+            chandelier8,
+        ]
+        index = int(sys.argv[2])
+
+        self.components = chandeliers[index - 1]()
 
     def scene_rep(self):
         
