@@ -82,15 +82,9 @@ class PolygonLayer(SceneComponent):
             z = math.sin(angle) * self.radius
             joints.append(TransBlock(sphere, translate=(x,y,z), scale=(self.girth, self.girth, self.girth)))
 
-        chains = []
-        # for i, joint in enumerate(joints):
-        #     chain_type = self.chain_types[i % len(self.chain_types)]
-        #     top = joint.translate
-            
-        #     chains.append(chain_type(top))
 
         full_layer = TransBlock(
-            Tree(sides + joints + chains),
+            Tree(sides + joints),
             (0,0,0,0),
             self.center,
             (1,1,1)
