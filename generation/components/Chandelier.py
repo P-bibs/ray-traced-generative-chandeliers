@@ -263,6 +263,49 @@ def chandelier7():
 
     return [layer1, layer2, layer3] + chains + dangling_chains + candles + top_chain
 
+def chandelier8():
+
+    context.append_light(
+        DirectionalLight(context.get_id(), (0.5, 0.5, 0.5), (-0.5, 1, 0))
+    )
+
+    top_chain = [
+        TiltedSphereChain(materials.glass, (0, 7, 0), (0, 3, 0), 20)
+    ]
+
+    dummy_layer1 = PolygonLayer(materials.silver, (0, 3, 0),  2, 7, 0.05)
+    dummy_layer2 = PolygonLayer(materials.silver, (0, 3, 0),  4, 7, 0.05)
+    dummy_attach_points1 = dummy_layer1.get_attachment_points_world_space()
+    dummy_attach_points2 = dummy_layer2.get_attachment_points_world_space()
+
+    arms = []
+    for pt1, pt2 in zip(dummy_attach_points1, dummy_attach_points2):
+        # s bends
+        arms.append(
+            DemiCurve(materials.silver, (0, 3, 0), pt1, 10, 0.075)
+        )
+        arms.append(
+            TransBlock(Tree([DemiCurve(materials.silver, pt1, pt2, 10, 0.075)]), rotate=(1,0,0,180), translate=(0,6,0))
+        )
+
+    chains = []
+    candles = []
+    satellites = []
+    for pt in dummy_attach_points2:
+        satellite = PolygonLayer(materials.silver, (pt[0], pt[1] - 0.5, pt[2]), 0.5, 6, 0.05)
+
+        satellites.append(satellite)
+        for pt2 in satellite.get_attachment_points_world_space():
+            chains.append(
+                TiltedSphereChain(materials.glass, pt, pt2, 6)
+            )
+            candles.append(Candle(materials.gold, pt2, 0.4, color=(0.1, 0.07, 0)))
+
+
+
+
+    return top_chain + arms + satellites + candles + chains
+
 def axes():
     return [
             TransBlock(Cube(materials.bronze), scale=(10,0.07,0.07)),
@@ -302,7 +345,7 @@ def polygonLayerDemo():
 
 class Chandelier(SceneComponent):
     def __init__(self):
-        self.components = chandelier7()
+        self.components = chandelier8()
 
     def scene_rep(self):
         
