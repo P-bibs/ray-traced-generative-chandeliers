@@ -12,7 +12,7 @@ class Candle(SceneComponent):
         self.material = material
         self.base = base
         self.size = size
-        self.color = (1, 0.7, 0)
+        self.color = (0.5, 0.35, 0)
 
         self.stand_height = 0.5
         self.base_height = 0.5
@@ -59,6 +59,12 @@ class Candle(SceneComponent):
                 Sphere(materials.glass),
                 translate=(0, flame_translate, 0),
                 scale=(self.flame_radius, self.flame_height, self.flame_radius),
+            ),
+            # flame inner
+            TransBlock(
+                Sphere(materials.light),
+                translate=(0, flame_translate, 0),
+                scale=(self.flame_radius * 0.8, self.flame_radius * 0.8, self.flame_radius * 0.8),
             ),
         ]
 

@@ -78,3 +78,7 @@ wax = Material(
     specular=(0.7,0.7,0.7),
     shininess=10
 )
+
+light = Material(
+    ambient=(224,157,55)
+)
