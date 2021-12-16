@@ -173,16 +173,60 @@ def TaperedSphereChain(material, top, count, start_radius, end_radius):
     return TaperedChain(sphere, top, count, start_radius, end_radius)
 
 
-def DiamondChain(material, top, count, radius):
-    diamond = Tree(
-        [
-            TransBlock(
-                Cube(material),
-                rotate=(-1, -1, 0, 45),
+# def DiamondChain(material, top, count, radius):
+#     diamond = Tree(
+#         [
+#             TransBlock(
+#                 Cube(material),
+#                 rotate=(-1, -1, 0, 45),
+#             )
+#         ]
+#     )
+#     return TaperedChain(diamond, top, count, radius / 2, radius / 2)
+
+class DiamondChain(SceneComponent):
+    def __init__(self, material, top, count, start_length, end_length):
+        self.material = material
+        self.top = top
+        self.count = count
+        self.start_length = start_length
+        self.end_length = end_length
+
+    def scene_rep(self):
+        shape =  Tree(
+            [
+                TransBlock(
+                    Cube(self.material),
+                    rotate=(0.7693838, 0.244335, 0.5902107, math.degrees(0.9872716))
+                )
+            ]
+        )
+
+        calculate_radius = lambda side_length: (3 ** 0.5) * side_length / 2
+
+        links = []
+        current_y_location = 0
+        interped_radius = calculate_radius(self.start_length)
+        for i in range(self.count):
+            current_y_location -= interped_radius
+
+            interped_length = (self.end_length - self.start_length) * i / (self.count ) + self.start_length
+            interped_radius = calculate_radius(interped_length)
+            current_y_location -= interped_radius 
+
+
+            links.append(
+                TransBlock(
+                    shape,
+                    translate=(0, current_y_location, 0),
+                    scale=(interped_length, interped_length, interped_length),
+                )
             )
-        ]
-    )
-    return TaperedChain(diamond, top, count, radius / 2, radius / 2)
+
+        return TransBlock(
+            Tree(links),
+            translate=(self.top[0], self.top[1], self.top[2]),
+        ).scene_rep()
 
 
 class TaperedChain(SceneComponent):
