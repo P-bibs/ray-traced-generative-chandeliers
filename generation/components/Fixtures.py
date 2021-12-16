@@ -8,11 +8,18 @@ import context
 
 
 class Candle(SceneComponent):
-    def __init__(self, material, base, size):
+    def __init__(self, material, base, size, color=None, light=None):
         self.material = material
         self.base = base
         self.size = size
-        self.color = (0.5, 0.35, 0)
+        if color is None:
+            self.color = (0.5, 0.35, 0)
+        else:
+            self.color = color
+        if light is None:
+            self.light = materials.light
+        else:
+            self.light = light
 
         self.stand_height = 0.5
         self.base_height = 0.5
@@ -62,7 +69,7 @@ class Candle(SceneComponent):
             ),
             # flame inner
             TransBlock(
-                Sphere(materials.light),
+                Sphere(self.light),
                 translate=(0, flame_translate, 0),
                 scale=(self.flame_radius * 0.8, self.flame_radius * 0.8, self.flame_radius * 0.8),
             ),

@@ -64,6 +64,22 @@ bronze = Material(
     shininess=76.8
 )
 
+red = Material(
+    ambient=( 0.5, 0, 0),
+    diffuse=(0.5, 0, 0),
+    specular=(0.7739, 0, 0),
+    reflective=(0.4, 0, 0),
+    shininess=89
+)
+
+blue = Material(
+    ambient=(0, 0, 0.5,),
+    diffuse=(0, 0, 0.5,),
+    specular=(0, 0, 0.7739,),
+    reflective=(0, 0, 0.4,),
+    shininess=89
+)
+
 glass = Material(
     specular=(0.2, 0.2, 0.2),
     shininess=15,
@@ -80,5 +96,12 @@ wax = Material(
 )
 
 light = Material(
-    ambient=(224,157,55)
+    ambient=(224 * 0.04 ,157 * 0.04 ,55 * 0.04 )
+)
+
+red_light = Material(
+    ambient=(30, 0, 0 )
+)
+blue_light = Material(
+    ambient=(0, 0, 30 )
 )

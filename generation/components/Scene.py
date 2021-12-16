@@ -37,13 +37,15 @@ class Scene(SceneComponent):
         self.specular = settings.specular 
         self.ambient = settings.ambient 
         self.transparent = settings.transparent
-        self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
 
-        self.env_map = settings.environment_map
 
         self.chandelier = Chandelier()
 
     def scene_rep(self):
+        self.camera = Camera(settings.camera_position, settings.camera_focus, (0,1,0), settings.camera_angle)
+        self.env_map = settings.environment_map
+
+
         chandelier = self.chandelier.scene_rep()
         light_data = [light.scene_rep() for light in context.get_lights()]
         light_data = '\n'.join(light_data)
