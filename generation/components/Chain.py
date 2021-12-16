@@ -172,18 +172,6 @@ def TaperedSphereChain(material, top, count, start_radius, end_radius):
     sphere = Sphere(material)
     return TaperedChain(sphere, top, count, start_radius, end_radius)
 
-
-# def DiamondChain(material, top, count, radius):
-#     diamond = Tree(
-#         [
-#             TransBlock(
-#                 Cube(material),
-#                 rotate=(-1, -1, 0, 45),
-#             )
-#         ]
-#     )
-#     return TaperedChain(diamond, top, count, radius / 2, radius / 2)
-
 class DiamondChain(SceneComponent):
     def __init__(self, material, top, count, start_length, end_length):
         self.material = material
